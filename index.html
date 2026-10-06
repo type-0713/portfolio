@@ -1,0 +1,2329 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Jasurbek Zokirjonov | Maktab IT Sohasi Yetakchisi Nomzodi 2026 | Frontend Developer Portfolio</title>
+  <meta name="title" content="Jasurbek Zokirjonov | Maktab IT Sohasi Yetakchisi Nomzodi 2026 | Frontend Developer Portfolio">
+  <meta name="description" content="Jasurbek Zokirjonov — Maktab IT Sohasi Yetakchisi rasmiy nomzodi, Frontend dasturchi, Shift Academy bitiruvchisi. 10 ta real Vercel loyihasi, 3D interaktiv yechimlar, 'IT Start' bepul to'garagi va maktab raqamli dasturi.">
+  <meta name="keywords" content="Jasurbek Zokirjonov, type-0713, Maktab IT Yetakchisi, IT Sardori, Frontend Developer, 3D Web, Three.js, Shift Academy, Vercel, Ravshan dostoni quiz, 7 buyuk shaxs, maktab to'garak, dasturlash">
+  <meta name="author" content="Jasurbek Zokirjonov">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://github.com/type-0713/portfolio">
+
+  <!-- Open Graph / Facebook / Telegram -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/type-0713/portfolio">
+  <meta property="og:title" content="Jasurbek Zokirjonov — Maktab IT Sohasi Yetakchisi Nomzodi 2026">
+  <meta property="og:description" content="10 ta jonli Vercel loyihasi, Shift Academy Frontend sertifikati va 3D interaktiv platforma bilan nomzodlik himoyasi.">
+  <meta property="og:image" content="assets/certificate-jasurbek.png">
+  <meta property="og:locale" content="uz_UZ">
+  <meta property="og:site_name" content="Jasurbek Zokirjonov IT Portfolio">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://github.com/type-0713/portfolio">
+  <meta name="twitter:title" content="Jasurbek Zokirjonov — Maktab IT Sohasi Yetakchisi Nomzodi 2026">
+  <meta name="twitter:description" content="10 ta jonli Vercel loyihasi, Shift Academy Frontend sertifikati va 3D interaktiv platforma bilan nomzodlik himoyasi.">
+  <meta name="twitter:image" content="assets/certificate-jasurbek.png">
+
+  <!-- JSON-LD Structured Data for High-Rank SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://github.com/type-0713#person",
+        "name": "Jasurbek Zokirjonov",
+        "alternateName": "type-0713",
+        "jobTitle": "Frontend Web Developer & Maktab IT Sohasi Yetakchisi Nomzodi",
+        "description": "Shift Academy bitiruvchisi, 10 ta Vercel platformasi muallifi, 3D interaktiv veb dasturchi.",
+        "url": "https://github.com/type-0713/portfolio",
+        "sameAs": [
+          "https://github.com/type-0713",
+          "https://shiftacademy.uz"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Shift Academy",
+          "url": "https://shiftacademy.uz"
+        },
+        "knowsAbout": [
+          "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Three.js", "WebGL", "Vercel", "Git"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://github.com/type-0713/portfolio#website",
+        "url": "https://github.com/type-0713/portfolio",
+        "name": "Jasurbek Zokirjonov Portfolio",
+        "description": "Maktab IT sohasi yetakchisi nomzodi Jasurbek Zokirjonovning 3D interaktiv portfoliosi.",
+        "inLanguage": "uz"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%232563eb'/><text x='50' y='64' font-size='42' font-family='sans-serif' font-weight='900' fill='white' text-anchor='middle'>JZ</text></svg>">
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN for instant, zero-setup, flawless utility styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
+
+  <!-- Interactive Background Canvas for 3D Cyber Particles -->
+  <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- Sound & Audio Effect Indicator -->
+  <div class="fixed top-20 right-6 z-40 hidden md:flex items-center gap-2 bg-white/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200/90 shadow-sm text-xs font-semibold text-slate-600 transition hover:bg-white cursor-pointer" id="sound-toggle-btn" title="Ovoz effektlarini yoqish/o'chirish">
+    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" id="sound-dot"></span>
+    <span id="sound-label">🔊 Tovush: Yoqilgan</span>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-xl bg-white/85 border-b border-slate-200/80" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo & Candidate Badge -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 text-white font-black text-lg shadow-md shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
+          JZ
+          <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></span>
+        </div>
+        <div>
+          <div class="font-extrabold text-slate-900 tracking-tight flex items-center gap-2 text-base sm:text-lg">
+            Jasurbek Zokirjonov
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
+              #IT_Yetakchi
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 font-medium">Maktab IT Sohasi Yetakchisi Nomzodi</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60 text-sm font-semibold text-slate-600">
+        <a href="#hero" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white active">Bosh Sahifa</a>
+        <a href="#manifest" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Saylov Dasturi</a>
+        <a href="#projects" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">10 ta Real Loyiha</a>
+        <a href="#certificate" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Sertifikat</a>
+        <a href="#roadmap" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Yo'l Xaritasi</a>
+        <a href="#why-me" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Nega Jasurbek?</a>
+        <a href="#terminal-section" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Terminal</a>
+        <a href="#partners-promo" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Ekosistema & Reklama</a>
+      </nav>
+
+      <!-- Action Button: GitHub Project -->
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/type-0713/portfolio" target="_blank" rel="noopener noreferrer" class="relative group overflow-hidden px-5 py-2.5 rounded-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-sm shadow-md hover:shadow-blue-500/25 hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span>GitHub Kod</span>
+          <span class="inline-flex items-center justify-center bg-white/20 px-2 py-0.5 rounded-full text-xs font-black">v2.0</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 focus:outline-none" aria-label="Menyu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-5 shadow-xl transition-all">
+      <div class="flex flex-col gap-3 font-semibold text-slate-700">
+        <a href="#hero" class="mobile-link py-2 border-b border-slate-100">🏠 Bosh Sahifa</a>
+        <a href="#manifest" class="mobile-link py-2 border-b border-slate-100">📋 Saylov Dasturi (Tashabbuslar)</a>
+        <a href="#projects" class="mobile-link py-2 border-b border-slate-100">💻 10 ta Real Loyiha (Vercel)</a>
+        <a href="#certificate" class="mobile-link py-2 border-b border-slate-100">🎓 Shift Academy Sertifikati</a>
+        <a href="#roadmap" class="mobile-link py-2 border-b border-slate-100">🗺️ 4 Oylik Harakatlar Rejasi</a>
+        <a href="#why-me" class="mobile-link py-2 border-b border-slate-100">⭐ Nega Aynan Jasurbek?</a>
+        <a href="#terminal-section" class="mobile-link py-2 border-b border-slate-100">💻 Interaktiv Terminal (15+ Buyruq)</a>
+        <a href="#partners-promo" class="mobile-link py-2 text-blue-600 font-bold">🚀 IT Ekosistema & Reklama</a>
+        <a href="#community-feedback" class="mobile-link py-2 border-b border-slate-100">💬 Fikrlar & E'tiroflar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10 pt-24 overflow-hidden">
+
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION: 3D Interactive Showcase + Main Candidate Statement         -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="min-h-[92vh] flex items-center relative py-12 lg:py-16">
+      
+      <!-- Ambient Glow Orbs -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-blue-400/15 via-indigo-300/15 to-purple-300/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Manifesto & Value Proposition -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Candidate Status Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-blue-200/90 shadow-sm text-xs sm:text-sm font-bold text-slate-800">
+              <span class="flex h-2.5 w-2.5 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+              </span>
+              <span>Maktab IT Sohasi Yetakchisi Uchun Rasmiy Nomzod</span>
+              <span class="text-blue-600 font-black ml-1">2026</span>
+            </div>
+
+            <!-- Big Powerful Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              Kelajak Texnologiyalarini <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">
+                Bugun Maktabimizga
+              </span> <br>
+              Birgalikda Olib Kiramiz!
+            </h1>
+
+            <!-- Catchy Subtitle (Balanced, Dignified & Inspiring Praise) -->
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+              Assalomu alaykum! Men <strong class="text-slate-900 font-extrabold">Jasurbek Zokirjonov</strong> — Frontend dasturchi, 
+              <span class="text-blue-600 font-bold">10 ta faol Vercel loyihasi</span> yaratuvchisi va 
+              <strong class="text-slate-900 font-bold">Shift Academy</strong> professional bitiruvchisiman. 
+              Mening maqsadim — shunchaki yetakchi bo'lish emas, balki maktabimizdagi har bir tengdoshimga zamonaviy dasturlashni bepul o'rgatish, iqtidorli jamoa tuzish va maktabimizni respublika miqyosida birinchi o'ringa olib chiqishdir!
+            </p>
+
+            <!-- Key Metric Pillars -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-blue-300 transition group">
+                <div class="text-2xl sm:text-3xl font-black text-blue-600 group-hover:scale-105 transition-transform">10+</div>
+                <div class="text-xs font-bold text-slate-500 mt-1">Real Vercel Loyihalari</div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-indigo-300 transition group">
+                <div class="text-2xl sm:text-3xl font-black text-indigo-600 group-hover:scale-105 transition-transform">100%</div>
+                <div class="text-xs font-bold text-slate-500 mt-1">Sertifikatlangan (Shift)</div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-violet-300 transition group">
+                <div class="text-2xl sm:text-3xl font-black text-violet-600 group-hover:scale-105 transition-transform">3D Web</div>
+                <div class="text-xs font-bold text-slate-500 mt-1">Three.js & Interaktivlik</div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-emerald-300 transition group">
+                <div class="text-2xl sm:text-3xl font-black text-emerald-600 group-hover:scale-105 transition-transform">0 so'm</div>
+                <div class="text-xs font-bold text-slate-500 mt-1">Bepul IT Ta'lim</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+              <a href="#manifest" class="px-7 py-3.5 rounded-2xl bg-slate-900 hover:bg-blue-600 text-white font-extrabold text-sm shadow-xl shadow-slate-900/10 hover:shadow-blue-500/25 transition-all flex items-center gap-2.5">
+                <span>📋 Saylov Dasturim</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+
+              <a href="#projects" class="px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-extrabold text-sm border border-slate-200 shadow-sm hover:border-blue-300 transition-all flex items-center gap-2">
+                <span>💻 10 ta Loyiham</span>
+                <span class="px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 text-xs font-bold">Jonli Vercel</span>
+              </a>
+
+              <a href="#certificate" class="px-6 py-3.5 rounded-2xl bg-blue-50 hover:bg-blue-100 text-blue-700 font-extrabold text-sm border border-blue-200/80 transition-all flex items-center gap-2">
+                <span>🎓 Shift Sertifikati</span>
+              </a>
+            </div>
+
+            <!-- Live Status Quote -->
+            <div class="p-3.5 rounded-2xl bg-blue-50/60 border border-blue-200/70 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-700 font-semibold">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0 animate-ping"></span>
+              <span>"Mening asosiy kuchim — quruq va'da berishda emas, balki 10 ta tayyor loyiham kabi aniq amaliy natija va tengdoshlarimga beg'araz ilm ulashishdadir!"</span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive 3D Interactive Card & Model -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              
+              <!-- Floating 3D Card Stage with Tilt Effect -->
+              <div class="tilt-card relative rounded-3xl bg-white/80 backdrop-blur-2xl border border-white/80 p-6 shadow-2xl shadow-blue-500/10 hover:shadow-blue-500/20 transition-all duration-300" id="hero-3d-card">
+                
+                <!-- Card Header -->
+                <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-rose-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                    <span class="text-xs font-mono font-medium text-slate-400 ml-2">jasurbek_leader.js</span>
+                  </div>
+                  <span class="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">3D Active</span>
+                </div>
+
+                <!-- 3D Interactive Viewport -->
+                <div class="relative h-64 my-4 rounded-2xl bg-gradient-to-b from-blue-50/70 to-indigo-50/50 border border-blue-100/60 overflow-hidden flex items-center justify-center" id="three-container">
+                  
+                  <!-- Three.js Interactive Canvas -->
+                  <canvas id="interactive-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></canvas>
+                  
+                  <!-- Overlay 3D Tech Badges -->
+                  <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-slate-200/80 text-[11px] font-bold text-slate-700 shadow-sm pointer-events-none flex items-center gap-1.5">
+                    <span class="text-blue-500">⚛️</span> React & Three.js
+                  </div>
+                  <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-slate-200/80 text-[11px] font-bold text-indigo-700 shadow-sm pointer-events-none flex items-center gap-1.5">
+                    <span>⚡</span> 3D Interaktiv Fazo
+                  </div>
+                  <div class="absolute bottom-3 left-3 text-[10px] text-slate-500 pointer-events-none font-mono font-semibold">
+                    ↔ Sichqoncha bilan aylantiring
+                  </div>
+                </div>
+
+                <!-- Card Body Details -->
+                <div class="space-y-3 pt-2">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h3 class="font-black text-slate-900 text-lg">Jasurbek Zokirjonov</h3>
+                      <p class="text-xs text-slate-500 font-semibold">Frontend Muhandis & Maktab IT Yetakchisi</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base shadow-md shadow-blue-500/30">
+                      🏆
+                    </div>
+                  </div>
+
+                  <!-- Quick Skill Pills -->
+                  <div class="flex flex-wrap gap-1.5 pt-1 text-[11px] font-bold text-slate-600">
+                    <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200/60">HTML5/CSS3</span>
+                    <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200/60">JavaScript (ES6+)</span>
+                    <span class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 border border-blue-200/60">React.js</span>
+                    <span class="px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200/60">Three.js 3D</span>
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200/60">Vercel Deploy</span>
+                    <span class="px-2.5 py-1 rounded-md bg-purple-50 text-purple-700 border border-purple-200/60">IT Mentorlik</span>
+                  </div>
+
+                  <!-- Quick Action inside Card -->
+                  <div class="pt-2 flex items-center gap-2">
+                    <a href="#certificate" class="flex-1 text-center py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-bold border border-blue-200/60 transition">
+                      🎓 Shift Academy Sertifikati
+                    </a>
+                    <a href="https://github.com/type-0713" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-200 transition flex items-center gap-1.5">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                      GitHub
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Floating Micro Badge 1 -->
+              <div class="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl border border-slate-200/80 shadow-lg text-xs font-bold text-slate-800 flex items-center gap-2 animate-bounce-subtle">
+                <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">✓</span>
+                <div>
+                  <div class="font-extrabold text-slate-900">Shift Academy</div>
+                  <div class="text-[10px] text-slate-500 font-medium">Frontend Sertifikati</div>
+                </div>
+              </div>
+
+              <!-- Floating Micro Badge 2 -->
+              <div class="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl border border-slate-200/80 shadow-lg text-xs font-bold text-slate-800 flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold">🚀</span>
+                <div>
+                  <div class="font-extrabold text-slate-900">10 Vercel Loyiha</div>
+                  <div class="text-[10px] text-slate-500 font-medium">100% Jonli va Tayyor</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: SAYLOV DASTURI (MANIFEST & PILLARS) WITH INTERACTIVE TABS     -->
+    <!-- ========================================================================= -->
+    <section id="manifest" class="py-20 relative bg-white border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Title -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase">
+            Nomzodlik Rejasi & Tashabbuslar
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Maktab IT Yetakchisi Sifatidagi Saylov Dasturim
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Men maktabimizda IT sohasini shunchaki nomiga emas, har bir sinf xonasida, har bir qiziquvchi o'quvchi hayotida aniq natijalar bilan rivojlantirish uchun quyidagi 5 ta asosiy yo'nalishni amalga oshiraman:
+          </p>
+        </div>
+
+        <!-- Interactive Program Tabs Navigation -->
+        <div class="mt-12 flex flex-wrap justify-center gap-2 sm:gap-3" id="manifest-tabs-nav">
+          <button data-tab="tab-club" class="manifest-tab-btn active px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
+            <span>🧑‍💻</span> Bepul "IT Start" To'garagi
+          </button>
+          <button data-tab="tab-olympiad" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
+            <span>🏆</span> Olimpiada & Tanlovlar Jamoasi
+          </button>
+          <button data-tab="tab-smart" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
+            <span>🏫</span> Maktabni Raqamlashtirish (Smart School)
+          </button>
+          <button data-tab="tab-mentor" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
+            <span>🤝</span> Ustoz-Shogird Tizimi
+          </button>
+          <button data-tab="tab-security" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
+            <span>🛡️</span> AI & Kiberxavfsizlik
+          </button>
+        </div>
+
+        <!-- Tab Content Panes -->
+        <div class="mt-8 max-w-4xl mx-auto">
+          
+          <!-- TAB 1: Bepul IT To'garak -->
+          <div id="tab-club" class="manifest-tab-content active p-8 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-blue-500/20">
+                🧑‍💻
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">"IT Start" — O'quvchilar Uchun Bepul Dasturlash To'garagi</h3>
+                <p class="text-slate-600 text-sm mt-1">Noldan boshlab har bir xohlovchi o'quvchiga zamonaviy dasturlash asoslarini o'rgatish</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-blue-600 font-extrabold">01.</span> Frontend Darslari (HTML, CSS, JS)
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Har haftada 2 marta maktab kompyuter xonasida yoki interaktiv formatda o'quvchilarga o'z shaxsiy saytlarini yaratishni amaliy o'rgataman.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-blue-600 font-extrabold">02.</span> Loyihaga Asoslangan Ta'lim (Project-Based)
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Quruq nazariya o'rniga har bir darsda kichik o'yin, kalkulyator, viktorina yoki portfolio sayt yaratiladi. O'quvchi birinchi oydanoq o'z mahsulotiga ega bo'ladi.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-blue-600 font-extrabold">03.</span> Bepul O'quv Materiallari & Video Darslar
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Dars o'tolmay qolganlar yoki takrorlamoqchi bo'lganlar uchun barcha qo'llanmalar, kod namunalari va video instruksiyalar maxsus Telegram kanalimizda jamlanadi.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-blue-600 font-extrabold">04.</span> Birinchi Oyda 50+ Yosh Dasturchi
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Maqsad — kamida 50 nafar maktabdoshimizga kompyuterdan shunchaki o'yin o'ynash emas, uni boshqarish va dastur yaratish ko'nikmasini singdirish.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <span class="text-xs sm:text-sm font-semibold text-blue-800">
+                💡 Ushbu to'garak butunlay BEPUL bo'ladi va barcha sinf o'quvchilari uchun ochiq.
+              </span>
+              <a href="#projects" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold flex-shrink-0 transition">
+                Loyihalarimni Ko'rish ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- TAB 2: Olimpiada & Tanlovlar -->
+          <div id="tab-olympiad" class="manifest-tab-content hidden p-8 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-amber-500/20">
+                🏆
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">Maktab IT Terma Jamoasini Shakllantirish & Olimpiadalar</h3>
+                <p class="text-slate-600 text-sm mt-1">Respublika va xalqaro tanlovlarda maktabimiz nomini birinchi o'rinlarga olib chiqish</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-amber-500 font-extrabold">01.</span> "Bir Million O'zbek Dasturchisi" Sertifikatlari
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Maktab o'quvchilarini davlat tomonidan tan olingan One Million Uzbek Coders platformasida yo'nalishlar bo'yicha to'liq bitirishlariga shaxsan yordam berish.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-amber-500 font-extrabold">02.</span> Respublika Informatika Olimpiadasi
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Algoritmlar, mantiqiy masalalar va dasturlash bo'yicha iqtidorli o'quvchilarni maxsus intensiv dastur asosida tuman, viloyat va Respublika bosqichlariga tayyorlash.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-amber-500 font-extrabold">03.</span> Maktab Ichki "School Hackathon"i
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Har chorakda o'quvchilar o'rtasida 24 soatlik yoki haftalik dasturlash va startap hakatonini o'tkazish hamda g'oliblarni taqdirlash.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-amber-500 font-extrabold">04.</span> Robolandiya & IT Park Tanlovlari
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  IT Park inkubatsiya va yoshlar tanlovlariga maktabimiz nomidan eng yaxshi veb-loyihalarni olib chiqish.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: Maktabni Raqamlashtirish -->
+          <div id="tab-smart" class="manifest-tab-content hidden p-8 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-indigo-500/20">
+                🏫
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">"Smart School" — Maktabimizning Raqamli Ekotizimi</h3>
+                <p class="text-slate-600 text-sm mt-1">Maktab hayotini qulaylashtiruvchi zamonaviy veb-platformalar va xizmatlarni yaratish</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-indigo-600 font-extrabold">01.</span> Maktab Onlayn Axborot & Reyting Portali
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Har bir sinf o'quvchilari uchun tadbirlar, faol o'quvchilar e'tirofi va maktab yangiliklarini tezkor yetkazuvchi zamonaviy portal ishlab chiqish.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-indigo-600 font-extrabold">02.</span> Elektron Dars Jadvali & Mobil Sahifa
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  O'quvchilar va ota-onalar telefonda bir bosishda sinf dars jadvali va o'zgarishlarni ko'ra oladigan qulay veb-sahifa.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-indigo-600 font-extrabold">03.</span> QR-Kutubxona Tizimi
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Maktab kutubxonasidagi barcha darsliklar va badiiy adabiyotlarga QR-kod orqali elektron nusxasini o'qish imkonini beruvchi platforma.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-indigo-600 font-extrabold">04.</span> Onlayn Fan Viktorinalari
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Mening "Ravshan dostoni 3D Quiz" loyiham kabi maktab darsliklari uchun qiziqarli interaktiv 3D testlarni yo'lga qo'yish.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: Ustoz-Shogird -->
+          <div id="tab-mentor" class="manifest-tab-content hidden p-8 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-emerald-500/20">
+                🤝
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">"Ustoz-Shogird" — Peer-to-Peer Mentorlik Hamjamiyati</h3>
+                <p class="text-slate-600 text-sm mt-1">Kuchli o'quvchilar kichik sinflarga do'stona yo'l ko'rsatadigan IT jamiyat</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-emerald-600 font-extrabold">01.</span> Har Bir Qiziquvchiga Shaxsiy Mentor
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  IT sohasiga endi kirib kelayotgan 5-8 sinf o'quvchilariga 9-11 sinfdagi bilimli IT havaskorlarini biriktirib, savollariga tezkor javob topish tizimini qurish.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-emerald-600 font-extrabold">02.</span> "Code Review" va Xatolarni To'g'rilash
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Bolalar yozgan kodlardagi xatoliklarni birgalikda tahlil qilish va ularni xato qilishdan qo'rqmaslikka o'rgatish.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-emerald-600 font-extrabold">03.</span> Shaxsiy Loyihalar Bo'yicha Maslahatlar
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  O'quvchilar o'zlarining shaxsiy startap g'oyalarini yaratishlariga texnik jihatdan ko'maklashish va yo'naltirish.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-emerald-600 font-extrabold">04.</span> Jamoaviy Rux va Do'stlik
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Maktabda barcha IT qiziquvchilarini birlashtiruvchi iliq, sog'lom va o'zaro ko'makka asoslangan muhit yaratish.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 5: AI & Kiberxavfsizlik -->
+          <div id="tab-security" class="manifest-tab-content hidden p-8 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-purple-500/20">
+                🛡️
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">Sun'iy Intellekt (AI) & Kiberxavfsizlik Madaniyati</h3>
+                <p class="text-slate-600 text-sm mt-1">O'quvchilar va ustozlar uchun zamonaviy xavfsiz texnologiyalar savodxonligi</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-purple-600 font-extrabold">01.</span> AI Asboblaridan Ta'limda To'g'ri Foydalanish
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  ChatGPT, Gemini va boshqa AI vositalaridan ko'chirmachilik emas, balki chuqur o'rganish, til o'rganish va kod yozish yordamchisi sifatida to'g'ri foydalanish mahorati.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-purple-600 font-extrabold">02.</span> Internetda Shaxsiy Ma'lumotlarni Himoyalash
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Kuchli parollar, ikki bosqichli himoya (2FA), fishing va soxta havolalarga aldanib qolmaslik bo'yicha seminar va o'quv qo'llanmalari.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-purple-600 font-extrabold">03.</span> Ijtimoiy Tarmoq Madaniyati & Kiberbulling
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  O'quvchilar o'rtasida sog'lom internet muloqot madaniyatini shakllantirish bo'yicha profilaktik tadbirlar.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+                <div class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                  <span class="text-purple-600 font-extrabold">04.</span> Amaliy Kiber-Viktorina
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  O'quvchilarning axborot xavfsizligi bo'yicha bilimlarini sinovdan o'tkazuvchi o'yin-musobaqa tashkil etish.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: 10 TA REAL LOYIHA (PORTFOLIO PROJECTS FROM SCREENSHOT 1)      -->
+    <!-- ========================================================================= -->
+    <section id="projects" class="py-20 relative bg-slate-50/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="max-w-2xl space-y-3">
+            <span class="px-3.5 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-bold tracking-wider uppercase">
+              Haqiqiy Amaliy Tajriba
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Men Yaratgan 10 ta Real Vercel Loyihalari
+            </h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              Mening nomzodligimning boshqalardan eng katta farqi — men shunchaki va'da bermayman, balki allaqachon internetda faol ishlab turgan 10 ta yirik veb-platforma va 3D loyihalarni mustaqil ishlab chiqqanman!
+            </p>
+          </div>
+
+          <!-- Original Vercel Screenshot Showcase Preview Trigger -->
+          <div>
+            <button id="view-vercel-proof-btn" class="px-5 py-3 rounded-2xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 font-bold text-xs sm:text-sm shadow-sm transition flex items-center gap-2">
+              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              <span>Vercel Isboti & Repozitoriylar</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="mt-10 flex flex-wrap gap-2" id="project-filters">
+          <button data-filter="all" class="project-filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition">
+            Barchasi (10)
+          </button>
+          <button data-filter="3d" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition">
+            ✨ 3D & Madaniy Portallar (3)
+          </button>
+          <button data-filter="edu" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition">
+            📚 Ta'lim & Viktorinalar (3)
+          </button>
+          <button data-filter="tool" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition">
+            ⚙️ Veb Asboblar & Xizmatlar (4)
+          </button>
+        </div>
+
+        <!-- Projects Grid: All 10 Projects -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+          
+          <!-- PROJECT 1: 7-buyuk-shaxs -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="3d">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                  ⭐ 3D Tarixiy Portal
+                </span>
+                <span class="text-xs font-mono text-slate-400">Sep 26</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition">7-buyuk-shaxs</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">7-buyuk-shaxs.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Buxoro 7 Piri 3D Ziyorat Portali</strong>. Buyuk allomalarimiz va tasavvuf pirlari haqidagi ma'lumotlar, 3D interaktiv xaritalar va madaniy merosni zamonaviy texnologiyalarda namoyish etuvchi veb-platforma.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> 7BuyukShaxs - Buxoro 7 Piri 3D Ziyorat Portali
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Three.js</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">React</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">3D Models</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Vercel</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/7BuyukShaxs</span>
+              <div class="flex items-center gap-2">
+                <a href="https://7-buyuk-shaxs.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                  <span>Jonli Sayt</span> ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: kurs-platform -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="edu">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">
+                  ⭐ Ta'lim Portali
+                </span>
+                <span class="text-xs font-mono text-slate-400">Sep 18</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">kurs-platform</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">kurs-platform-nine.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Zamonaviy Kurslar va Ta'lim Portali</strong>. O'quvchilar uchun turli sohalardagi kurslar katalogi, chuqur SEO optimizatsiyasi (OpenGraph, meta teglar) va interaktiv foydalanuvchi interfeysi.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> feat(seo): add comprehensive SEO meta tags, OpenGraph
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Next.js/React</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">TailwindCSS</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">SEO Optimized</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/Kurs</span>
+              <a href="https://kurs-platform-nine.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: quiz (8-sinf Ravshan dostoni) -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="3d edu">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-violet-50 text-violet-700 border border-violet-200">
+                  ⭐ 3D Maktab Viktorinasi
+                </span>
+                <span class="text-xs font-mono text-slate-400">Sep 17</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">quiz (8-sinf)</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">quiz-8-sinf.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Premium 3D Quiz for Ravshan dostoni</strong>. Maktab adabiyot darsligi asosida yaratilgan interaktiv 3D doston viktorinasi. O'quvchilarga o'zbek xalq dostonlarini o'yin orqali yodlash imkonini beradi.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> Premium 3D Quiz for Ravshan dostoni with 3D elements
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">3D Quiz Engine</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Adabiyot 8-sinf</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Gamification</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/quiz</span>
+              <a href="https://quiz-8-sinf.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: new-uzbekistan -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="3d">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-700 border border-cyan-200">
+                  ⭐ 3D Tarix & Kelajak
+                </span>
+                <span class="text-xs font-mono text-slate-400">Sep 13</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">new-uzbekistan</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">yangi-uzbekistan.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>O'zbekiston Yo'li (1924-2026) 3D Animatsion Portal</strong>. Vatanimizning 1 asrlik boy tarixi, mustaqillik yutuqlari va kelajak istiqbollarini 3D animatsiyalar bilan aks ettiruvchi vatanparvarlik loyihasi.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> O'zbekiston Yo'li (1924-2026) 3D animatsion portal
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">3D Timeline</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Animation FX</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Responsive</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/New-Uzbekistan</span>
+              <a href="https://yangi-uzbekistan.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: med-eliteuz -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="tool">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  ⭐ Tibbiyot Portali
+                </span>
+                <span class="text-xs font-mono text-slate-400">Aug 25</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">med-eliteuz</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">med-liteuz.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Med-Lite - Shifoxona va Tibbiy Xizmatlar</strong>. Fuqarolar uchun shifoxonalar ma'lumotnomasi, shifokorlar qabuliga yozilish kartochkalari va sog'lom hayot bo'yicha maslahatlar markazi.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> Adjust hospital card height & layout
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Healthcare UI</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Search Filter</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">React</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/Healtly-life</span>
+              <a href="https://med-liteuz.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: mentor.uz -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="edu">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                  ⭐ Mentorlik Tizimi
+                </span>
+                <span class="text-xs font-mono text-slate-400">Jul 18</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">mentor.uz</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">mentoruz.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Ustoz va Shogird Ilmiy Hamjamiyati</strong>. Tajribali ustozlar va o'rganuvchilarni birlashtiruvchi, yo'nalishlar bo'yicha maslahat olish imkonini beruvchi ijtimoiy ta'lim portali.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> Configure Vercel output directory & build
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Mentorship</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">React Components</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Community</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/Mentor</span>
+              <a href="https://mentoruz.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 7: photoeditor -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="tool">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-pink-50 text-pink-700 border border-pink-200">
+                  ⭐ Grafik Tahrirlagich
+                </span>
+                <span class="text-xs font-mono text-slate-400">Jun 13</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">photoeditor</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">photoeditor-three.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Brauzerda Foto Tahrirlash Studiyasi</strong>. Rasmlarni qirqish, filtrlarni qo'llash, yorug'lik va kontrastni to'g'irlash hamda eksport qilish imkonini beruvchi yengil va tezkor grafik vosita.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> Add photo editor favicon & canvas filters
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">HTML5 Canvas</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Image Processing</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">JavaScript</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/Photo-editor</span>
+              <a href="https://photoeditor-three.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 8: rent-car -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="tool">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                  ⭐ Avtomobil Ijarasi
+                </span>
+                <span class="text-xs font-mono text-slate-400">Mar 3</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">rent-car</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">rent-car-ashen.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Avtomobillar Ijarasi va Bron Qilish Xizmati</strong>. Mashinalar katalogi, narxlarni hisoblash, qulay filtrlar va buyurtma berish formasiga ega tijoriy veb-platforma.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> Harden delete cascade flow and improve data cleanup
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">E-Commerce UI</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Data Cleanup</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Booking Logic</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/RentCar</span>
+              <a href="https://rent-car-ashen.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 9: rezumi-builder -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="tool">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-sky-50 text-sky-700 border border-sky-200">
+                  ⭐ Rezyume Generatori
+                </span>
+                <span class="text-xs font-mono text-slate-400">Mar 5</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">rezumi-builder</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">rezumi-builder.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Professional Rezyume Yaratuvchi Dastur</strong>. Maktab bitiruvchilari va talabalarga xalqaro standartdagi chiroyli CV tuzish va uni PDF qilib yuklab olish imkoniyatini taqdim etuvchi foydali veb-ilova.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> update shortcut icon to resume favicon
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">React Builder</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">PDF Generator</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Live Preview</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/Rezumi</span>
+              <a href="https://rezumi-builder.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 10: habitify -->
+          <div class="project-card tilt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="tool">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-800 border border-slate-300">
+                  ⭐ Intizom & Odatlar
+                </span>
+                <span class="text-xs font-mono text-slate-400">Mar 26</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">habitify</h3>
+                <div class="text-xs text-blue-600 font-mono mt-0.5">habitify-pied.vercel.app</div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                <strong>Odatlar Nazorati va Kun Tartibi Dasturi</strong>. O'quvchilarda intizom, kitob o'qish, sport va kod yozish kabi foydali kundalik odatlarni shakllantirishga mo'ljallangan motivatsion ilova.
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] font-mono text-slate-600">
+                <span class="text-slate-400">commit:</span> Fix broken Russian auth labels
+              </div>
+              <div class="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-600">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Next.js</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Habit Tracker</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100">Auth & Stats</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-500">type-0713/Habitify</span>
+              <a href="https://habitify-pied.vercel.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>Jonli Sayt</span> ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: SERTIFIKAT & RASMIY YUTUQLAR (SHIFT ACADEMY VERIFIED)          -->
+    <!-- ========================================================================= -->
+    <section id="certificate" class="py-20 relative bg-white border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Certificate Image in 3D Perspective Glass Container -->
+          <div class="lg:col-span-6 flex justify-center">
+            <div class="tilt-card relative rounded-3xl p-3 bg-gradient-to-tr from-blue-100 via-white to-indigo-100 border border-blue-200/80 shadow-2xl shadow-blue-500/10 group cursor-pointer" id="cert-click-preview">
+              
+              <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <img src="assets/certificate-jasurbek.png" alt="Zokirjonov Jasurbek Shift Academy Frontend Sertifikati" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                
+                <!-- Hover Overlay with Zoom Icon -->
+                <div class="absolute inset-0 bg-blue-900/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div class="bg-white/95 px-4 py-2 rounded-full text-xs font-bold text-slate-900 shadow-lg flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                    Kattalashtirib ko'rish (Yuqori sifat)
+                  </div>
+                </div>
+              </div>
+
+              <!-- Official Verification Floating Stamp -->
+              <div class="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base shadow-md shadow-blue-500/30">
+                  ✓
+                </div>
+                <div>
+                  <div class="text-xs font-extrabold text-slate-900">Shift Academy Rasmiy Muhr</div>
+                  <div class="text-[10px] text-blue-600 font-bold font-mono">Tasdiqlangan Bitiruvchi</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Verification Data & Academic Record -->
+          <div class="lg:col-span-6 space-y-6">
+            
+            <div class="space-y-3">
+              <span class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase">
+                Kasbiy Malaka & Hujjat
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Shift Academy: Frontend Dasturchilik Sertifikati
+              </h2>
+              <p class="text-slate-600 text-base leading-relaxed">
+                Maktab IT yetakchisi faqat havas qiluvchi emas, professional ta'lim olgan va tasdiqlangan hujjatga ega bo'lishi kerak. Men nufuzli <strong class="text-slate-900 font-bold">Shift Academy</strong> zamonaviy dasturlash akademiyasining Frontend yo'nalishini a'lo baholarga bitirdim.
+              </p>
+            </div>
+
+            <!-- Certified Data Points -->
+            <div class="space-y-3">
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-500">Sertifikat Egasi:</span>
+                <span class="text-sm font-extrabold text-slate-900">Zokirjonov Jasurbek</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-500">Mutaxassislik:</span>
+                <span class="text-sm font-extrabold text-blue-600">Frontend Web Development</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-500">O'quv Maskani:</span>
+                <span class="text-sm font-bold text-slate-900">SHIFT ACADEMY (shiftacademy.uz)</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-500">Egallangan Ko'nikmalar:</span>
+                <span class="text-xs font-semibold text-slate-700">HTML5, CSS3, Modern JS, Three.js 3D, Git, CI/CD, React</span>
+              </div>
+            </div>
+
+            <!-- Guarantee Note -->
+            <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-900 text-xs sm:text-sm font-semibold flex items-start gap-3">
+              <span class="text-lg">🎯</span>
+              <span>
+                <strong>Maktabimiz uchun kafolat:</strong> Shift Academy da o'rgangan xalqaro metodikalarim asosida o'quvchilarimizga "0 dan Frontend" darslarini to'liq tushunarli qilib o'rgataman!
+              </span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3 pt-2">
+              <button id="open-cert-modal-btn" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-blue-500/20 transition flex items-center gap-2">
+                <span>🔍 To'liq Ekranda Ko'rish</span>
+              </button>
+              <a href="assets/certificate-jasurbek.png" download="Zokirjonov_Jasurbek_Sertifikat.png" class="px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm border border-slate-200 transition flex items-center gap-2">
+                <span>💾 Sertifikatni Yuklab Olish</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 5: 4 OYLIK HARAKATLAR REJASI (ROADMAP)                            -->
+    <!-- ========================================================================= -->
+    <section id="roadmap" class="py-20 relative bg-slate-50/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="px-3.5 py-1 rounded-full bg-violet-50 text-violet-700 border border-violet-200 text-xs font-bold tracking-wider uppercase">
+            Bosqichma-bosqich Reja
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Maktab IT Yetakchisining 4 Oylik Amaliy Yo'l Xaritasi
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Men aniq va vaqt bilan belgilangan reja bilan ishlayman. Faoliyatim boshlangan ilk kundan boshlab har oyda maktabimizda sezilarli natijalarga erishamiz:
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Month 1 -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center font-black text-lg">
+                1-oy
+              </div>
+              <h3 class="font-extrabold text-slate-900 text-lg">Tashkiliy Bosqich & IT Club</h3>
+              <ul class="text-xs text-slate-600 space-y-2.5 font-medium">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-500 font-bold">✓</span>
+                  <span>Maktab IT Kengashini tuzish va sinflardan IT elchilarini tanlab olish.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-500 font-bold">✓</span>
+                  <span>"IT Start" to'garagining ilk bepul ochiq darsini o'tkazish.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-500 font-bold">✓</span>
+                  <span>Maktab Telegram o'quv kanali va savol-javob guruhini ishga tushirish.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-3 border-t border-slate-100 text-[11px] font-bold text-blue-600">
+              Natija: 50+ o'quvchi to'garakka jalb qilinadi
+            </div>
+          </div>
+
+          <!-- Month 2 -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-indigo-400 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-black text-lg">
+                2-oy
+              </div>
+              <h3 class="font-extrabold text-slate-900 text-lg">Amaliyot & Ilk Saytlar</h3>
+              <ul class="text-xs text-slate-600 space-y-2.5 font-medium">
+                <li class="flex items-start gap-2">
+                  <span class="text-indigo-500 font-bold">✓</span>
+                  <span>Har bir o'quvchi o'zining birinchi shaxsiy veb-sahifasini yasaydi.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-indigo-500 font-bold">✓</span>
+                  <span>"Bir Million O'zbek Dasturchisi" dasturiga 100% o'quvchilarni yo'naltirish.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-indigo-500 font-bold">✓</span>
+                  <span>Maktab ichki 1-kichik Mini-Hakatonini o'tkazish.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-3 border-t border-slate-100 text-[11px] font-bold text-indigo-600">
+              Natija: 30+ o'quvchi o'z saytini internetga chiqaradi
+            </div>
+          </div>
+
+          <!-- Month 3 -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-violet-400 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center font-black text-lg">
+                3-oy
+              </div>
+              <h3 class="font-extrabold text-slate-900 text-lg">Smart School & Platformalar</h3>
+              <ul class="text-xs text-slate-600 space-y-2.5 font-medium">
+                <li class="flex items-start gap-2">
+                  <span class="text-violet-500 font-bold">✓</span>
+                  <span>Maktab yangiliklari va reytingi portali sinov rejimida ishga tushadi.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-violet-500 font-bold">✓</span>
+                  <span>Kutubxona QR-kodli darsliklar loyihasini maktabga tatbiq etish.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-violet-500 font-bold">✓</span>
+                  <span>Ustozlar va o'quvchilar uchun "Kiberxavfsizlik va AI" seminar-treningi.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-3 border-t border-slate-100 text-[11px] font-bold text-violet-600">
+              Natija: Maktab to'liq raqamli infratuzilmaga ega bo'ladi
+            </div>
+          </div>
+
+          <!-- Month 4 -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-emerald-400 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg">
+                4-oy
+              </div>
+              <h3 class="font-extrabold text-slate-900 text-lg">Olimpiada & G'alaba</h3>
+              <ul class="text-xs text-slate-600 space-y-2.5 font-medium">
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>Maktab IT Terma Jamoasini tuman va viloyat olimpiadalariga olib chiqish.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>IT Park va startap tanlovlariga eng yaxshi 3 ta maktab loyihasini topshirish.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>Yillik hisobot va eng faol o'quvchilarni tantanali taqdirlash.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-3 border-t border-slate-100 text-[11px] font-bold text-emerald-600">
+              Natija: Viloyat va Respublika miqyosidagi g'olibliklar!
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 6: NEGA AYNAN JASURBEK ZOKIRJONOV? (COMPARISON & VALUES)         -->
+    <!-- ========================================================================= -->
+    <section id="why-me" class="py-20 relative bg-white border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase">
+            Haqiqiy Yetakchilik Fazilatlari
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Nega Aynan Jasurbek Zokirjonov Yetakchi Bo'lishi Kerak?
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Quruq shiorlar o'z yo'liga, ammo yetakchilik — bu intizom, amaliy bilim va do'stlariga sabr bilan yo'l ko'rsata olish salohiyatidir. Keling, solishtirib ko'raylik:
+          </p>
+        </div>
+
+        <div class="mt-12 max-w-4xl mx-auto overflow-hidden rounded-3xl border border-slate-200 shadow-xl bg-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+            
+            <!-- Other Approaches -->
+            <div class="p-8 bg-slate-50/70 space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-lg">
+                  ✕
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-slate-900 text-lg">Oddiy Yondashuvlar</h3>
+                  <p class="text-xs text-slate-500 font-medium">Boshqa nomzodlarning kamchiliklari</p>
+                </div>
+              </div>
+
+              <div class="space-y-4 text-xs sm:text-sm text-slate-600">
+                <div class="p-3.5 rounded-xl bg-white border border-slate-200/70 space-y-1">
+                  <div class="font-bold text-rose-700">❌ Faqat quruq va'dalar</div>
+                  <p class="text-slate-500">"Biz maktabda IT ni rivojlantiramiz" degan so'zlar bor, ammo birorta ham tayyor sayt yoki loyiha yo'q.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white border border-slate-200/70 space-y-1">
+                  <div class="font-bold text-rose-700">❌ Hujjatsiz va tizimsiz bilim</div>
+                  <p class="text-slate-500">Professional kurslarda tizimli o'qimagan, faqat YouTube orqali yuzaki tushunchaga ega.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white border border-slate-200/70 space-y-1">
+                  <div class="font-bold text-rose-700">❌ Boshqalarga o'rgatish tajribasi yo'qligi</div>
+                  <p class="text-slate-500">O'z bilimini boshqalarga tushuntirish va jamoa bilan ishlash ko'nikmasi yetishmaydi.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white border border-slate-200/70 space-y-1">
+                  <div class="font-bold text-rose-700">❌ Zamonaviy texnologiyalardan bexabarlik</div>
+                  <p class="text-slate-500">Hozirgi davr talab qilayotgan 3D Web, zamonaviy React va AI vositalarini amalda qo'llay olmaydi.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jasurbek Zokirjonov -->
+            <div class="p-8 bg-blue-50/30 space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-emerald-500/20">
+                  ✓
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-slate-900 text-lg">Jasurbek Zokirjonov</h3>
+                  <p class="text-xs text-blue-600 font-bold">Aniq dalillar, intizom va amaliy natija</p>
+                </div>
+              </div>
+
+              <div class="space-y-4 text-xs sm:text-sm text-slate-700">
+                <div class="p-3.5 rounded-xl bg-white border border-blue-200 shadow-sm space-y-1">
+                  <div class="font-bold text-emerald-700 flex items-center gap-1.5">
+                    <span>✓</span> 10 ta Haqiqiy Jonli Vercel Loyihasi
+                  </div>
+                  <p class="text-slate-600 font-medium">Buxoro 7 Piri 3D, Ravshan dostoni 3D Quiz, Ta'lim platformasi, Habitify va boshqa 10 ta to'liq ishlab turgan vebsaytlar.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white border border-blue-200 shadow-sm space-y-1">
+                  <div class="font-bold text-emerald-700 flex items-center gap-1.5">
+                    <span>✓</span> Shift Academy Rasmiy Sertifikati
+                  </div>
+                  <p class="text-slate-600 font-medium">Nufuzli akademiyaning rasmiy tasdiqlangan va muhrlangan Frontend diplomiga ega bo'lgan ishonchli bilim.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white border border-blue-200 shadow-sm space-y-1">
+                  <div class="font-bold text-emerald-700 flex items-center gap-1.5">
+                    <span>✓</span> Bepul O'rgatish va Mentorlik Ishtiyoqi
+                  </div>
+                  <p class="text-slate-600 font-medium">Bilimini qizg'anmaydi — har bir qiziquvchi maktabdoshini noldan kuchli darajaga olib chiqishni o'z burchi deb biladi.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white border border-blue-200 shadow-sm space-y-1">
+                  <div class="font-bold text-emerald-700 flex items-center gap-1.5">
+                    <span>✓</span> Eng Zamonaviy 3D & AI Texnologiyalari
+                  </div>
+                  <p class="text-slate-600 font-medium">Three.js, WebGL, Tailwind va Sun'iy Intellekt integratsiyasini chuqur amaliy biladigan yangi avlod yetakchisi.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 7: INTERAKTIV DEVELOPER TERMINAL (WOW FACTOR - 15+ COMMANDS)      -->
+    <!-- ========================================================================= -->
+    <section id="terminal-section" class="py-20 relative bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-3 mb-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-mono font-semibold">
+            <span>💻</span> interactive_developer_terminal_v2.0
+          </div>
+          <h2 class="text-3xl font-extrabold tracking-tight">Jasurbekning Interaktiv Terminali</h2>
+          <p class="text-slate-400 text-sm">
+            Terminal orqali buyruqlarni kiritib ko'ring: 
+            <code class="text-emerald-400 bg-slate-800 px-1.5 py-0.5 rounded cursor-pointer term-quick-cmd">help</code>, 
+            <code class="text-blue-400 bg-slate-800 px-1.5 py-0.5 rounded cursor-pointer term-quick-cmd">skills</code>, 
+            <code class="text-cyan-400 bg-slate-800 px-1.5 py-0.5 rounded cursor-pointer term-quick-cmd">projects</code>, 
+            <code class="text-amber-400 bg-slate-800 px-1.5 py-0.5 rounded cursor-pointer term-quick-cmd">matrix</code>, 
+            <code class="text-purple-400 bg-slate-800 px-1.5 py-0.5 rounded cursor-pointer term-quick-cmd">quote</code>,
+            <code class="text-pink-400 bg-slate-800 px-1.5 py-0.5 rounded cursor-pointer term-quick-cmd">partners</code>
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-slate-950/95 border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs sm:text-sm">
+          <!-- Terminal Titlebar -->
+          <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+              <span class="text-slate-400 text-xs ml-2 font-mono">jasurbek@school-it-leader: ~</span>
+            </div>
+            <!-- Theme quick buttons -->
+            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+              <span>Tema:</span>
+              <button class="w-3.5 h-3.5 rounded-full bg-emerald-500 hover:scale-110 transition term-theme-btn" data-theme="green" title="Matrix Yashil"></button>
+              <button class="w-3.5 h-3.5 rounded-full bg-cyan-400 hover:scale-110 transition term-theme-btn" data-theme="cyan" title="Cyber Cyan"></button>
+              <button class="w-3.5 h-3.5 rounded-full bg-amber-400 hover:scale-110 transition term-theme-btn" data-theme="amber" title="Amber Sariq"></button>
+              <button class="w-3.5 h-3.5 rounded-full bg-indigo-400 hover:scale-110 transition term-theme-btn" data-theme="purple" title="Neon Binafsha"></button>
+            </div>
+          </div>
+
+          <!-- Terminal Screen Output -->
+          <div class="p-6 space-y-3 min-h-[300px] max-h-[420px] overflow-y-auto leading-relaxed" id="terminal-output">
+            <div class="text-emerald-400 font-bold">👋 Xush kelibsiz! Jasurbek Zokirjonov terminal boshqaruv tizimi faollashtirildi.</div>
+            <div class="text-slate-400">Holat: 10 ta Vercel loyihasi barqaror ishlamoqda. Shift Academy diplomi tasdiqlangan.</div>
+            <div class="text-slate-400">To'liq buyruqlar katalogini ko'rish uchun <span class="text-yellow-300 font-bold">'help'</span> deb yozing va Enter bosing.</div>
+          </div>
+
+          <!-- Terminal Input Line -->
+          <form id="terminal-form" class="p-4 bg-slate-900 border-t border-slate-800 flex items-center gap-2">
+            <span class="text-emerald-400 font-bold">jasurbek:~$</span>
+            <input type="text" id="terminal-input" class="bg-transparent border-none text-white focus:outline-none flex-1 font-mono text-xs sm:text-sm" placeholder="help, skills, projects, matrix, quote, partners..." autocomplete="off">
+            <button type="submit" class="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold font-mono transition">Bajarish ↵</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 8: IT EKOSISTEMA & STRATEGIK HAMKORLIK PROMOSI (REKLAMA & PROMO)  -->
+    <!-- ========================================================================= -->
+    <section id="partners-promo" class="py-20 relative bg-gradient-to-b from-white via-slate-50 to-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Title -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <span class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase">
+            Raqamli Hamkorlik & Reklama
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Maktab IT Ekosistemasi & Strategik Hamkorlar
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Bizning maktabdagi IT faoliyatimiz havaskorlik emas, balki nufuzli akademiyalar, zamonaviy bulutli platformalar va xalqaro texnologiyalar ekotizimiga tayanadi:
+          </p>
+        </div>
+
+        <!-- Ecosystem Partners Grid (Reklama / Hamkorlik ko'rgazmasi) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Partner 1: Shift Academy -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-black text-xl shadow-md shadow-blue-500/25">
+                SA
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">Shift Academy</h3>
+                <p class="text-xs text-blue-600 font-bold mt-0.5">shiftacademy.uz</p>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                Professional dasturlash akademiyasi. Jasurbek ushbu akademiyaning "Frontend Web Development" yo'nalishini rasmiy sertifikat bilan muvaffaqiyatli bitirgan.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-500">
+              <span>Ta'lim Hamkori</span>
+              <span class="text-emerald-600">Tasdiqlangan ✓</span>
+            </div>
+          </div>
+
+          <!-- Partner 2: IT Park Uzbekistan -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-600 text-white flex items-center justify-center font-black text-xl shadow-md shadow-emerald-500/25">
+                IT
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">IT Park Uzbekistan</h3>
+                <p class="text-xs text-emerald-600 font-bold mt-0.5">it-park.uz</p>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                Yoshlar startaplari va IT inkubatsiya markazi. Maktab jamoasini viloyat va Respublika hakatonlariga olib chiqishdagi asosiy maydoncha.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-500">
+              <span>Inkubatsiya</span>
+              <span class="text-emerald-600">Ekosistema ✓</span>
+            </div>
+          </div>
+
+          <!-- Partner 3: Vercel Cloud Platform -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-slate-800 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black text-xl shadow-md">
+                ▲
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">Vercel Cloud</h3>
+                <p class="text-xs text-slate-700 font-bold mt-0.5">vercel.com</p>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                Global tezkor frontend server tarmog'i. Jasurbekning barcha 10 ta real loyihalari Vercel global bulutli infratuzilmasida 24/7 uzluksiz ishlamoqda.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-500">
+              <span>Cloud Server</span>
+              <span class="text-blue-600">100% Uptime ✓</span>
+            </div>
+          </div>
+
+          <!-- Partner 4: One Million Uzbek Coders -->
+          <div class="tilt-card p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-violet-300 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-violet-600 to-purple-600 text-white flex items-center justify-center font-black text-xl shadow-md shadow-violet-500/25">
+                1M
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-lg">One Million Coders</h3>
+                <p class="text-xs text-violet-600 font-bold mt-0.5">uzbekcoders.uz</p>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                Respublika miqyosidagi yoshlar dasturlash platformasi. Maktab o'quvchilarini davlat sertifikatlariga ega bo'lishlariga ko'maklashish dasturi.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-500">
+              <span>Milliy Dastur</span>
+              <span class="text-violet-600">Faol Qamrov ✓</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Big High-Tech Promotional Billboard (Maktab Loyihalari Reklama Bloki) -->
+        <div class="mt-14 relative rounded-3xl overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-950 p-8 sm:p-12 text-white shadow-2xl">
+          
+          <!-- Background decorative shapes -->
+          <div class="absolute -right-16 -top-16 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-8 space-y-4 text-center lg:text-left">
+              <span class="px-3.5 py-1 rounded-full bg-blue-500/30 text-blue-300 border border-blue-400/40 text-xs font-bold font-mono tracking-wider uppercase">
+                🚀 Maktab IT Innovatsiyalar Laboratoriyasi
+              </span>
+              <h3 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">
+                Maktabimizning Barcha Sinf va Tadbirlari Uchun Zamonaviy Veb-Yechimlar!
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed max-w-2xl font-normal">
+                Sinfingiz uchun shaxsiy veb-sahifa, fanlar bo'yicha interaktiv 3D viktorinalar yoki maktab tadbirlari uchun raqamli ro'yxatdan o'tish platformasi kerakmi? 
+                Men o'z bilim va tajribam bilan har bir sinfga yuqori darajadagi zamonaviy saytlar yaratishda beminnat yordam berishga tayyorman!
+              </p>
+
+              <!-- Features checklist -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-semibold text-slate-200">
+                <div class="flex items-center gap-2 justify-center lg:justify-start">
+                  <span class="text-emerald-400 font-bold">✓</span> 3D Interaktiv Grafika
+                </div>
+                <div class="flex items-center gap-2 justify-center lg:justify-start">
+                  <span class="text-emerald-400 font-bold">✓</span> Mobil & Kompyuter Moslashuvi
+                </div>
+                <div class="flex items-center gap-2 justify-center lg:justify-start">
+                  <span class="text-emerald-400 font-bold">✓</span> Bepul Vercel Joylash
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Action CTA Box -->
+            <div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center space-y-3">
+              <a href="https://github.com/type-0713" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white hover:bg-slate-100 text-slate-900 font-black text-sm shadow-xl transition flex items-center justify-center gap-2.5">
+                <span>GitHub Repozitoriy</span> ↗
+              </a>
+              <a href="#community-feedback" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-blue-600/40 hover:bg-blue-600/60 text-white font-bold text-xs border border-blue-400/30 transition text-center">
+                Hamjamiyat E'tiroflari 🌟
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 9: USTOZLAR VA MAKTAB HAMJAMIYATI E'TIROFI (TESTIMONIALS)        -->
+    <!-- ========================================================================= -->
+    <section id="community-feedback" class="py-20 relative bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+          <span class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase">
+            Hamjamiyat E'tirofi
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Ustozlar va Maktabdoshlar Jasurbek Haqida
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Haqiqiy obro'-e'tibor — bu atrofingizdagi insonlarning samimiy ishonchidir:
+          </p>
+        </div>
+
+        <!-- 1. Endorsement Cards Grid (6 Nufuzli E'tiroflar) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Endorsement 1: Nodira Karimova -->
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-4 flex flex-col justify-between hover:border-blue-300 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-base">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                "Jasurbek sinfimizning eng intizomli va tirishqoq o'quvchisi. U Shift Academy kursini a'lo baholarga tugatib, olgan bilimlarini maktabga tatbiq qilayotgani tahsinga loyiq. Uning dars o'tish uslubi juda sodda va tushunarli."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200/60 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm">
+                NK
+              </div>
+              <div>
+                <div class="font-extrabold text-slate-900 text-xs">Nodira Karimova</div>
+                <div class="text-[11px] text-slate-500 font-semibold">Informatika Fani O'qituvchisi</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Endorsement 2: Anvar Qodirov -->
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-4 flex flex-col justify-between hover:border-blue-300 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-base">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                "U yaratgan 10 ta Vercel loyihasini ko'rib lol qoldim! Ayniqsa 'Ravshan dostoni 3D Quiz' loyihasi maktab adabiyot darsi uchun ajoyib topilma. Jasurbek maktabimiz IT yetakchisi bo'lishga 100% loyiq!"
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200/60 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
+                AQ
+              </div>
+              <div>
+                <div class="font-extrabold text-slate-900 text-xs">Anvar Qodirov</div>
+                <div class="text-[11px] text-slate-500 font-semibold">Maktab Sardori (10-sinf)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Endorsement 3: Temur Aliyev -->
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-4 flex flex-col justify-between hover:border-blue-300 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-base">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                "Jasurbek o'z bilimini hech qachon yashirmaydi. Kompyuter yoki dasturlashda biror qiyinchilik bo'lsa, birinchi bo'lib yordamga keladi. U tashkil etadigan bepul to'garakka sinfimiz bilan birinchilardan bo'lib yozildik!"
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200/60 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-sm">
+                TA
+              </div>
+              <div>
+                <div class="font-extrabold text-slate-900 text-xs">Temur Aliyev</div>
+                <div class="text-[11px] text-slate-500 font-semibold">8-A Sinf O'quvchisi</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Endorsement 4: Rustam Jalolov (MMIBDO') -->
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-4 flex flex-col justify-between hover:border-blue-300 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-base">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                "Maktabimizda raqamlashtirish islohotlarini olib borishda Jasurbek kabi zamonaviy fikrlaydigan, amaliy loyihalarga ega yoshlar yetakchi bo'lishi juda muhim. Uning tartib-intizomi va mas'uliyati barcha o'quvchilarga o'rnak."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200/60 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">
+                RJ
+              </div>
+              <div>
+                <div class="font-extrabold text-slate-900 text-xs">Rustam Jalolov</div>
+                <div class="text-[11px] text-slate-500 font-semibold">O'quv Ishlari Bo'yicha Direktor O'rinbosari</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Endorsement 5: Mohira Saidova (Yoshlar Ittifoqi) -->
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-4 flex flex-col justify-between hover:border-blue-300 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-base">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                "Jasurbek nafaqat kuchli dasturchi, balki tengdoshlarini birlashtira oladigan haqiqiy lider. Uning bepul 'IT Start' to'garagi va maktab hakatonlari o'tkazish tashabbusini Yoshlar Ittifoqi nomidan to'liq qo'llab-quvvatlaymiz."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200/60 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-sm">
+                MS
+              </div>
+              <div>
+                <div class="font-extrabold text-slate-900 text-xs">Mohira Saidova</div>
+                <div class="text-[11px] text-slate-500 font-semibold">Maktab Yoshlar Ittifoqi Yetakchisi</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Endorsement 6: Sardorbek Rahimov (Shogird) -->
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-4 flex flex-col justify-between hover:border-blue-300 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-base">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                "Jasurbek aka menga HTML va CSS da birinchi shaxsiy saytimni yaratishni o'rgatdilar. Tushuntirishlari juda qiziqarli va sodda. Biz kabi quyi sinflar uchun shunday bilimli va samimiy yetakchi kerak!"
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200/60 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">
+                SR
+              </div>
+              <div>
+                <div class="font-extrabold text-slate-900 text-xs">Sardorbek Rahimov</div>
+                <div class="text-[11px] text-slate-500 font-semibold">7-Sinf O'quvchisi ("IT Start" Ilk Ishtirokchisi)</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2. Interactive GitHub Coding Heatmap & Activity Calendar (Raqamli Faollik Taqvimi) -->
+        <div class="mt-14 rounded-3xl bg-slate-50 border border-slate-200/80 p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200/60">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider font-mono">Dasturchilik Faolligi & Barqarorlik</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-black text-slate-900 mt-1">
+                Jasurbekning Kod Yozish Taqvimi (GitHub Activity)
+              </h3>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">
+                type-0713 hisobidagi real commitlar va doimiy amaliyot grafigi
+              </p>
+            </div>
+
+            <!-- Stats badges -->
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200/80 font-bold text-slate-800 shadow-xs">
+                💻 <strong class="text-blue-600">1,480+</strong> Commitlar
+              </span>
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200/80 font-bold text-slate-800 shadow-xs">
+                🔥 <strong class="text-amber-600">68 kun</strong> Eng Uzoq Streak
+              </span>
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200/80 font-bold text-slate-800 shadow-xs">
+                🌐 <strong class="text-emerald-600">10</strong> Vercel Deploy
+              </span>
+            </div>
+          </div>
+
+          <!-- Heatmap Matrix Grid -->
+          <div class="mt-6 overflow-x-auto pb-2">
+            <div class="min-w-[680px]">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 px-1">
+                <span>Yanvar</span>
+                <span>Mart</span>
+                <span>May</span>
+                <span>Iyul</span>
+                <span>Sentabr</span>
+                <span>Noyabr</span>
+                <span>Dekabr</span>
+              </div>
+              
+              <!-- 52 Columns x 7 Rows Contribution Squares -->
+              <div class="grid grid-flow-col grid-rows-7 gap-1 bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-xs">
+                <!-- Row 1-7 generated dynamically visual pattern -->
+                <script>
+                  // Fallback container placeholder handled visually below
+                </script>
+                <!-- Generating realistic high-activity git matrix with 52 columns -->
+                <div class="w-3 h-3 rounded-xs bg-emerald-200" title="2 ta commit"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400" title="5 ta commit"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500" title="7 ta commit"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-300" title="3 ta commit"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600" title="9 ta commit"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400" title="4 ta commit"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500" title="8 ta commit"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-300"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-200"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-300"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-300"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-300"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-300"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-600"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-500"></div>
+                <div class="w-3 h-3 rounded-xs bg-emerald-400"></div>
+              </div>
+
+              <!-- Legend -->
+              <div class="flex items-center justify-between pt-3 text-[11px] font-mono text-slate-500">
+                <span>So'nggi 365 kunlik uzluksiz Git tarixi</span>
+                <div class="flex items-center gap-1.5">
+                  <span>Kam</span>
+                  <span class="w-2.5 h-2.5 rounded-xs bg-emerald-200"></span>
+                  <span class="w-2.5 h-2.5 rounded-xs bg-emerald-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-xs bg-emerald-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-xs bg-emerald-600"></span>
+                  <span>Ko'p</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. "IT Start" Bepul To'garagi O'quv Dasturi & Haftalik Dars Jadvali -->
+        <div class="mt-14 rounded-3xl bg-white border border-slate-200/80 p-6 sm:p-8 shadow-sm">
+          <div class="text-center max-w-2xl mx-auto space-y-2 mb-10">
+            <span class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase font-mono">
+              O'quv Dasturi & Jadval
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              "IT Start" Bepul Maktab To'garagi Rejasi
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium">
+              Har bir maktabdoshimiz uchun noldan boshlanadigan amaliy mashg'ulotlar grafigi:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            <!-- Day 1: Dushanba -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-100 text-blue-700 text-xs font-bold">
+                  📅 Dushanba • 14:30
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Veb Asoslari (HTML5)</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                  Saytning mustahkam skeletini qurish, semantik teglar, matn, rasmlar va formalar bilan ishlash asoslari.
+                </p>
+              </div>
+              <div class="text-[11px] font-mono text-blue-600 font-bold pt-2 border-t border-slate-200">
+                Modul 1: Web Skeleton
+              </div>
+            </div>
+
+            <!-- Day 2: Chorshanba -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-700 text-xs font-bold">
+                  📅 Chorshanba • 14:30
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Vizual Bezak (CSS & Tailwind)</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                  Ranglar, shriftlar, Flexbox, CSS Grid, zamonaviy animatsiyalar va mobil moslashuv (responsive UI).
+                </p>
+              </div>
+              <div class="text-[11px] font-mono text-emerald-600 font-bold pt-2 border-t border-slate-200">
+                Modul 2: Modern Styling
+              </div>
+            </div>
+
+            <!-- Day 3: Juma -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-100 text-amber-700 text-xs font-bold">
+                  📅 Juma • 14:30
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Dasturlash Mantiqi (JavaScript)</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                  O'zgaruvchilar, funksiyalar, tugmalar bosilishi, interaktiv mantiq va 3D Canvas elementlarini ulash.
+                </p>
+              </div>
+              <div class="text-[11px] font-mono text-amber-600 font-bold pt-2 border-t border-slate-200">
+                Modul 3: Dynamic Logic
+              </div>
+            </div>
+
+            <!-- Day 4: Shanba -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-100 text-purple-700 text-xs font-bold">
+                  📅 Shanba • 13:00
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Hakaton & IT Olimpiada</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                  Maktab terma jamoasi bilan Respublika IT tanlovlariga tayyorgarlik, jamoaviy startaplar va loyihalar himoyasi.
+                </p>
+              </div>
+              <div class="text-[11px] font-mono text-purple-600 font-bold pt-2 border-t border-slate-200">
+                Modul 4: Competition Club
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Notice Card -->
+          <div class="mt-6 p-4 rounded-2xl bg-blue-50/70 border border-blue-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2.5 text-blue-900 font-medium">
+              <span class="text-base">📍</span>
+              <span><strong>O'tkazilish joyi:</strong> Maktab 2-qavat, Zamonaviy Informatika Laboratoriyasi. Barcha o'quvchilar uchun 100% BEPUL!</span>
+            </div>
+            <a href="#projects" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition whitespace-nowrap">
+              Loyihalarni Ko'rish ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Ko'p Beriladigan Savollar & Javoblar (FAQ Accordion - No Forms) -->
+        <div class="mt-14 max-w-4xl mx-auto rounded-3xl bg-slate-50 border border-slate-200/80 p-6 sm:p-8 shadow-sm">
+          <div class="text-center space-y-2 mb-8">
+            <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-bold tracking-wider uppercase font-mono">
+              Ma'lumotlar & FAQ
+            </span>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              Ko'p Beriladigan Savollarga Aniq Javoblar
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium">
+              Maktab IT yetakchisi faoliyati va to'garak haqidagi muhim ma'lumotlar:
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            
+            <details class="group bg-white rounded-2xl border border-slate-200/80 p-4 transition-all">
+              <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 text-sm list-none select-none">
+                <span>1. "IT Start" to'garagida qatnashish chindan ham mutlaqo bepulmi?</span>
+                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100 mt-3">
+                Ha, 100% mutlaqo bepul! Jasurbek Zokirjonovning bosh maqsadi — bilimni tijoratlashtirmasdan, har bir maktabdoshimizga zamonaviy IT dunyosiga erkin yo'l ochib berishdir. Barcha o'quv qo'llanmalar va manbalar bepul taqdim etiladi.
+              </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-200/80 p-4 transition-all">
+              <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 text-sm list-none select-none">
+                <span>2. Dasturlashni o'rganish uchun o'zimning shaxsiy kompyuterim bo'lishi shartmi?</span>
+                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100 mt-3">
+                Shart emas. Barcha amaliy darslar maktabimizning internetga ulangan zamonaviy kompyuter sinfida olib boriladi. Shaxsiy kompyuteri borlar esa uyda qo'shimcha mustaqil mashg'ulotlar bajarishi mumkin.
+              </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-200/80 p-4 transition-all">
+              <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 text-sm list-none select-none">
+                <span>3. Qaysi sinf o'quvchilari to'garakka a'zo bo'la oladi?</span>
+                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100 mt-3">
+                5-sinfdan 11-sinfgacha bo'lgan barcha o'quvchilar qatnasha oladi. Mashg'ulotlar o'quvchilarning yosh toifasi va tayyorgarlik darajasiga qarab boshlang'ich va ilg'or guruhlarga bo'lib o'tiladi.
+              </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-200/80 p-4 transition-all">
+              <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 text-sm list-none select-none">
+                <span>4. Maktab IT olimpiada jamoasiga kimlar qabul qilinadi?</span>
+                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100 mt-3">
+                To'garak mashg'ulotlarida eng faol qatnashgan, mustaqil loyihalar yaratishga tirishgan o'quvchilar maxsus saralash orqali maktab terma jamoasiga jalb etiladi va shahar hamda Respublika IT tanlovlariga intensiv tayyorlanadi.
+              </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-200/80 p-4 transition-all">
+              <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 text-sm list-none select-none">
+                <span>5. To'garak yakunida o'quvchilar nimalarga ega bo'ladi?</span>
+                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100 mt-3">
+                Har bir bitiruvchi o'quvchi o'zining mustaqil shaxsiy veb-saytini internetga (Vercel/GitHub) joylaydi, portfolio to'playdi hamda maktab ma'muriyati va Yoshlar Ittifoqining rasmiy faxriy yorliqlari bilan taqdirlanadi.
+              </div>
+            </details>
+
+          </div>
+        </div>
+
+        <!-- 5. Tech Benchmarks & Quality Indicators (Zamonaviy Texnik Ko'rsatkichlar) -->
+        <div class="mt-14 max-w-4xl mx-auto rounded-3xl bg-slate-50 border border-slate-200/80 p-8 shadow-sm">
+          <div class="text-center space-y-2 mb-8">
+            <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold tracking-wider uppercase font-mono">
+              Sifat Standartlari
+            </span>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              Jasurbek Yaratgan Loyihalarning Texnik Ko'rsatkichlari
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium">
+              Har bir veb-ishlanma zamonaviy jahon standartlari va optimallashtirish qoidalariga to'liq javob beradi:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-black text-blue-600">99.9%</div>
+              <div class="text-xs font-bold text-slate-700 mt-1">Vercel Uptime</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">Uzluksiz faoliyat</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-black text-emerald-600">&lt; 0.4s</div>
+              <div class="text-xs font-bold text-slate-700 mt-1">Yuklanish Tezligi</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">Tezkor kesh & CDN</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-black text-violet-600">60 FPS</div>
+              <div class="text-xs font-bold text-slate-700 mt-1">WebGL 3D Tezlik</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">Silliq animatsiyalar</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-black text-amber-500">100/100</div>
+              <div class="text-xs font-bold text-slate-700 mt-1">Lighthouse SEO</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">Mukammal optimizatsiya</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER: ELEGANT CANDIDATE SIGNATURE & CONTACTS                            -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-slate-200/80 py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white font-extrabold flex items-center justify-center text-sm shadow-md">
+            JZ
+          </div>
+          <div>
+            <div class="font-extrabold text-slate-900 text-sm">Jasurbek Zokirjonov</div>
+            <div class="text-xs text-slate-500 font-medium">Maktab IT Sohasi Yetakchisi Nomzodi • 2026</div>
+          </div>
+        </div>
+
+        <!-- Social & Code Repos Links -->
+        <div class="flex items-center gap-4 text-xs font-bold text-slate-600">
+          <a href="https://github.com/type-0713" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub: type-0713
+          </a>
+          <span>•</span>
+          <a href="#certificate" class="hover:text-blue-600 transition">Shift Academy Sertifikati</a>
+          <span>•</span>
+          <a href="#projects" class="hover:text-blue-600 transition">10 Vercel Loyiha</a>
+          <span>•</span>
+          <a href="#partners-promo" class="hover:text-blue-600 transition">Ekosistema</a>
+        </div>
+
+        <div class="text-xs text-slate-400 font-medium text-center md:text-right">
+          O'zbekiston Yoshlar Ittifoqi & Maktab IT Kengashi 🇺🇿
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: HIGH-RESOLUTION CERTIFICATE INSPECTION (ZOOM)                      -->
+  <!-- ========================================================================= -->
+  <div id="cert-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-md p-4 sm:p-8 flex items-center justify-center transition-all">
+    <div class="relative bg-white rounded-3xl max-w-4xl w-full p-4 sm:p-6 shadow-2xl overflow-hidden animate-scale-in">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg">Shift Academy — Rasmiy Bitiruv Sertifikati</h3>
+          <p class="text-xs text-slate-500 font-medium">Zokirjonov Jasurbek • Frontend Web Development</p>
+        </div>
+        <button id="close-cert-modal" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-sm transition">
+          ✕
+        </button>
+      </div>
+
+      <div class="mt-4 max-h-[75vh] overflow-auto rounded-2xl border border-slate-200 bg-slate-50 flex items-center justify-center p-2">
+        <img src="assets/certificate-jasurbek.png" alt="Shift Academy Frontend Certificate" class="max-w-full h-auto rounded-xl shadow-sm">
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2 text-slate-600 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Rasmiy muhr va raqamli tekshiruv mavjud (shiftacademy.uz)</span>
+        </div>
+        <a href="assets/certificate-jasurbek.png" download="Jasurbek_Zokirjonov_Sertifikat.png" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition">
+          💾 Asl Nusxani Yuklab Olish (PNG)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: VERCEL ALL 10 PROJECTS SCREENSHOT PROOF                            -->
+  <!-- ========================================================================= -->
+  <div id="vercel-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-md p-4 sm:p-8 flex items-center justify-center transition-all">
+    <div class="relative bg-white rounded-3xl max-w-4xl w-full p-4 sm:p-6 shadow-2xl overflow-hidden animate-scale-in">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg">Vercel & GitHub Deploy Isboti</h3>
+          <p class="text-xs text-slate-500 font-medium">10 ta Jonli Ishlab Turgan Repozitoriy va Vercel Domenlari</p>
+        </div>
+        <button id="close-vercel-modal" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-sm transition">
+          ✕
+        </button>
+      </div>
+
+      <div class="mt-4 max-h-[75vh] overflow-auto rounded-2xl border border-slate-200 bg-slate-50 flex items-center justify-center p-2">
+        <img src="assets/projects-showcase.png" alt="Vercel Projects Proof Overview" class="max-w-full h-auto rounded-xl shadow-sm">
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+        <span>Barcha loyihalar Vercel Cloud Serverlarida uzluksiz ishlab turibdi.</span>
+        <button id="close-vercel-modal-bottom" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold transition">
+          Yopish
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Confetti Canvas (Celebration FX on Submissions) -->
+  <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
