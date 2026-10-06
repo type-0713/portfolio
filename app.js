@@ -16,16 +16,39 @@
  * ==============================================================================
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initAudioFX();
-  initBackgroundCanvas();
-  initHero3DCanvas();
-  initCardTilt();
-  initManifestTabs();
-  initProjectFilters();
-  initModals();
-  initTerminal();
-  initNavigation();
+// Global safe audio fallback
+window.playUiSound = function(type = 'click') {};
+
+function safeInit(name, fn) {
+  try {
+    fn();
+  } catch (err) {
+    console.error(`[Portfolio Error in ${name}]:`, err);
+  }
+}
+
+function initAll() {
+  safeInit('AudioFX', initAudioFX);
+  safeInit('BackgroundCanvas', initBackgroundCanvas);
+  safeInit('Hero3DCanvas', initHero3DCanvas);
+  safeInit('CardTilt', initCardTilt);
+  safeInit('ManifestTabs', initManifestTabs);
+  safeInit('ProjectFilters', initProjectFilters);
+  safeInit('Modals', initModals);
+  safeInit('Terminal', initTerminal);
+  safeInit('Navigation', initNavigation);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  // DOM is already parsed in fast deploy or cached environment
+  initAll();
+}
+
+// Window load safety fallback
+window.addEventListener('load', () => {
+  window.dispatchEvent(new Event('resize'));
 });
 
 /* ==============================================================================
@@ -200,12 +223,22 @@ function initHero3DCanvas() {
   const ctx = canvas.getContext('2d');
 
   function resize() {
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width * (window.devicePixelRatio || 1);
-    canvas.height = rect.height * (window.devicePixelRatio || 1);
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const parent = canvas.parentElement;
+    const w = canvas.clientWidth || (parent ? parent.clientWidth : 0) || 360;
+    const h = canvas.clientHeight || (parent ? parent.clientHeight : 0) || 256;
+    if (w > 0 && h > 0) {
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+    }
   }
   resize();
   window.addEventListener('resize', resize);
+  if (window.ResizeObserver && canvas.parentElement) {
+    try {
+      new ResizeObserver(resize).observe(canvas.parentElement);
+    } catch (_) {}
+  }
 
   // 3D Icosahedron Vertices (Golden Ratio)
   const phi = (1 + Math.sqrt(5)) / 2;
@@ -249,7 +282,9 @@ function initHero3DCanvas() {
     isDragging = true;
     lastMouseX = e.clientX;
     lastMouseY = e.clientY;
-    window.playUiSound('click');
+    if (typeof window.playUiSound === 'function') {
+      window.playUiSound('click');
+    }
   });
 
   window.addEventListener('mouseup', () => {
@@ -259,45 +294,53 @@ function initHero3DCanvas() {
   window.addEventListener('mousemove', (e) => {
     if (!isDragging) {
       const rect = canvas.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-      const offsetX = (e.clientX - centerX) / rect.width;
-      const offsetY = (e.clientY - centerY) / rect.height;
-      targetRotY += offsetX * 0.005;
-      targetRotX += offsetY * 0.005;
+      if (rect.width > 0 && rect.height > 0) {
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const offsetX = (e.clientX - centerX) / rect.width;
+        const offsetY = (e.clientY - centerY) / rect.height;
+        if (isFinite(offsetX) && isFinite(offsetY)) {
+          targetRotY += offsetX * 0.005;
+          targetRotX += offsetY * 0.005;
+        }
+      }
       return;
     }
     const deltaX = e.clientX - lastMouseX;
     const deltaY = e.clientY - lastMouseY;
-    targetRotY += deltaX * 0.01;
-    targetRotX -= deltaY * 0.01;
+    if (isFinite(deltaX) && isFinite(deltaY)) {
+      targetRotY += deltaX * 0.01;
+      targetRotX -= deltaY * 0.01;
+    }
     lastMouseX = e.clientX;
     lastMouseY = e.clientY;
   });
 
   // Touch Support
   canvas.addEventListener('touchstart', (e) => {
-    if (e.touches.length > 0) {
+    if (e.touches && e.touches.length > 0) {
       isDragging = true;
       lastMouseX = e.touches[0].clientX;
       lastMouseY = e.touches[0].clientY;
     }
-  });
+  }, { passive: true });
 
   window.addEventListener('touchend', () => {
     isDragging = false;
-  });
+  }, { passive: true });
 
   window.addEventListener('touchmove', (e) => {
-    if (isDragging && e.touches.length > 0) {
+    if (isDragging && e.touches && e.touches.length > 0) {
       const deltaX = e.touches[0].clientX - lastMouseX;
       const deltaY = e.touches[0].clientY - lastMouseY;
-      targetRotY += deltaX * 0.01;
-      targetRotX -= deltaY * 0.01;
+      if (isFinite(deltaX) && isFinite(deltaY)) {
+        targetRotY += deltaX * 0.01;
+        targetRotX -= deltaY * 0.01;
+      }
       lastMouseX = e.touches[0].clientX;
       lastMouseY = e.touches[0].clientY;
     }
-  });
+  }, { passive: true });
 
   // Satellite orbiting particles
   const satellites = [];
@@ -312,12 +355,26 @@ function initHero3DCanvas() {
   }
 
   function renderScene() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    if (canvas.width === 0 || canvas.height === 0) {
+      resize();
+    }
+    const w = (canvas.width / dpr) || 360;
+    const h = (canvas.height / dpr) || 256;
 
-    const cx = canvas.width / 2;
-    const cy = canvas.height / 2;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+
+    const cx = w / 2;
+    const cy = h / 2;
 
     targetRotY += 0.006;
+
+    // Safety checks against NaN
+    if (!isFinite(targetRotX) || !isFinite(rotX)) { targetRotX = 0.3; rotX = 0.3; }
+    if (!isFinite(targetRotY) || !isFinite(rotY)) { targetRotY = 0.4; rotY = 0.4; }
+    targetRotX = Math.max(-1.5, Math.min(1.5, targetRotX));
+
     rotX += (targetRotX - rotX) * 0.1;
     rotY += (targetRotY - rotY) * 0.1;
 
@@ -655,12 +712,21 @@ function initTerminal() {
     });
   });
 
-  // Quick Command buttons
+  function escapeHTML(str) {
+    if (!str) return '';
+    return str.replace(/[&<>'"]/g, 
+      tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+    );
+  }
+
+  // Quick Command buttons (direct execution, zero page reloads)
   quickCmds.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       const cmd = btn.textContent.trim();
-      input.value = cmd;
-      form.dispatchEvent(new Event('submit'));
+      input.value = '';
+      executeCommand(cmd);
     });
   });
 
@@ -681,16 +747,24 @@ function initTerminal() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const rawCmd = input.value.trim();
-    if (!rawCmd) return;
+    const rawCmd = input.value;
     input.value = '';
+    executeCommand(rawCmd);
+  });
 
-    printLine(`<span class="text-emerald-400 font-bold">jasurbek:~$</span> ${rawCmd}`, 'text-slate-200');
-    window.playUiSound('click');
+  function executeCommand(rawCmd) {
+    if (!rawCmd) return;
+    const trimmed = rawCmd.trim();
+    if (!trimmed) return;
 
-    const parts = rawCmd.toLowerCase().split(' ');
-    const cmd = parts[0];
-    const arg = parts.slice(1).join(' ');
+    printLine(`<span class="text-emerald-400 font-bold">jasurbek:~$</span> ${escapeHTML(trimmed)}`, 'text-slate-200');
+    if (typeof window.playUiSound === 'function') {
+      window.playUiSound('click');
+    }
+
+    const parts = trimmed.split(/\s+/);
+    const cmd = parts[0].toLowerCase();
+    const arg = parts.slice(1).join(' ').toLowerCase();
 
     switch (cmd) {
       case 'help':
@@ -906,10 +980,10 @@ function initTerminal() {
         break;
 
       default:
-        printLine(`<span class="text-rose-400">Noma'lum buyruq: "${rawCmd}". Buyruqlar ro'yxatini ko'rish uchun <span class="text-yellow-300 font-bold">help</span> deb yozing.</span>`);
+        printLine(`<span class="text-rose-400">Noma'lum buyruq: "${escapeHTML(rawCmd)}". Buyruqlar ro'yxatini ko'rish uchun <span class="text-yellow-300 font-bold">help</span> deb yozing.</span>`);
         break;
     }
-  });
+  }
 }
 
 /* ==============================================================================
