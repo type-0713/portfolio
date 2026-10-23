@@ -128,17 +128,32 @@ function initAudioFX() {
     }
   };
 
+  const mobileToggleBtn = document.getElementById('mobile-sound-toggle-btn');
+
+  function updateAudioUi() {
+    if (soundEnabled) {
+      if (soundLabel) soundLabel.textContent = "🔊 Tovush";
+      if (soundDot) soundDot.className = "w-2 h-2 rounded-full bg-emerald-500 animate-pulse";
+      if (mobileToggleBtn) mobileToggleBtn.innerHTML = "<span>🔊 Tovush: Yoqilgan</span>";
+      window.playUiSound('success');
+    } else {
+      if (soundLabel) soundLabel.textContent = "🔇 Tovush";
+      if (soundDot) soundDot.className = "w-2 h-2 rounded-full bg-slate-300";
+      if (mobileToggleBtn) mobileToggleBtn.innerHTML = "<span>🔇 Tovush: O'chirilgan</span>";
+    }
+  }
+
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
       soundEnabled = !soundEnabled;
-      if (soundEnabled) {
-        soundLabel.textContent = "🔊 Tovush: Yoqilgan";
-        soundDot.className = "w-2 h-2 rounded-full bg-emerald-500 animate-pulse";
-        window.playUiSound('success');
-      } else {
-        soundLabel.textContent = "🔇 Tovush: O'chirilgan";
-        soundDot.className = "w-2 h-2 rounded-full bg-slate-300";
-      }
+      updateAudioUi();
+    });
+  }
+
+  if (mobileToggleBtn) {
+    mobileToggleBtn.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      updateAudioUi();
     });
   }
 }
@@ -611,11 +626,11 @@ function initModals() {
   if (openVercelBtn) openVercelBtn.addEventListener('click', openVercel);
   if (closeVercelBtn) closeVercelBtn.addEventListener('click', closeVercel);
   if (closeVercelBottom) closeVercelBottom.addEventListener('click', closeVercel);
-  if (vercelModal) {
-    vercelModal.addEventListener('click', (e) => {
-      if (e.target === vercelModal) closeVercel();
-    });
-  }
+  const evidenceViewCert = document.getElementById('evidence-view-cert');
+  if (evidenceViewCert) evidenceViewCert.addEventListener('click', openCert);
+
+  const evidenceViewVercel = document.getElementById('evidence-view-vercel');
+  if (evidenceViewVercel) evidenceViewVercel.addEventListener('click', openVercel);
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -774,8 +789,9 @@ function initTerminal() {
         printLine(`
           <div class="space-y-1 text-slate-300">
             <div><span class="text-yellow-300 font-bold">=== MAVJUD BUYRUQLAR RO'YXATI ===</span></div>
+            <div>• <span class="text-blue-400 font-bold">keys</span> / <span class="text-blue-400 font-bold">cases</span> - Maktab muammolari va ularning 5 ta real IT yechimi</div>
+            <div>• <span class="text-amber-400 font-bold">audit</span> / <span class="text-amber-400 font-bold">dalillar</span> - Hakamlar va ekspertlar uchun ochiq dalillar portfeli</div>
             <div>• <span class="text-amber-400 font-bold">tuman</span> / <span class="text-amber-400 font-bold">bosqich</span> - Tuman bosqichi 2026 maqsadlari va missiyasi</div>
-            <div>• <span class="text-amber-400 font-bold">hakamlar</span> / <span class="text-amber-400 font-bold">score</span> - 5 Oltin mezon va 50/50 maksimal ball tahlili</div>
             <div>• <span class="text-amber-400 font-bold">compare</span> / <span class="text-amber-400 font-bold">raqiblar</span> - Jasurbek vs Raqiblar ob'yektiv taqqoslash jadvali</div>
             <div>• <span class="text-amber-400 font-bold">kubok</span> / <span class="text-amber-400 font-bold">champion</span> - Maktab bosqichi 1-o'rin kubogi va salyut</div>
             <div>• <span class="text-blue-400 font-bold">about</span> / <span class="text-blue-400 font-bold">bio</span> - Jasurbekning tarjimai holi va yetakchilik falsafasi</div>
@@ -980,6 +996,44 @@ function initTerminal() {
             <div>• Maktab: IT Kengashi va Yoshlar Ittifoqi binosi</div>
           </div>
         `);
+        break;
+
+      case 'keys':
+      case 'cases':
+      case 'muammo':
+        printLine(`
+          <div class="space-y-1 text-slate-300">
+            <div class="text-blue-400 font-bold">💡 MAKTAB MUAMMOLARIGA 5 TA AMALIY IT YECHIM:</div>
+            <div>1. <strong>Ravshan Dostoni 3D Quiz:</strong> Zerikarli doston yodlash o'rniga Three.js 3D o'yin.</div>
+            <div>2. <strong>7-Buyuk-Shaxs 3D:</strong> Qog'oz kitoblar o'rniga allomalarning 3D madaniy portali.</div>
+            <div>3. <strong>Kurs Platform:</strong> Qimmat kurslar o'rniga bepul ochiq ta'lim bazasi.</div>
+            <div>4. <strong>Habitify:</strong> Behudaga chalg'ish o'rniga kundalik kitob va sport odatlari trekeri.</div>
+            <div>5. <strong>Rezumi Builder:</strong> Tanlovlar va ishga hujjat topshirish uchun 3 daqiqada tayyor CV.</div>
+          </div>
+        `);
+        const caseSec = document.getElementById('case-studies');
+        if (caseSec) caseSec.scrollIntoView({ behavior: 'smooth' });
+        break;
+
+      case 'audit':
+      case 'dalillar':
+      case 'isbot':
+      case 'hakamlar':
+        printLine(`
+          <div class="space-y-1 text-slate-300">
+            <div class="text-amber-300 font-bold">🔍 HAKAMLAR VA EKSPERTLAR UCHUN OCHIQ AUDIT PORTFELI:</div>
+            <div>1. <strong>10 Ta Jonli Vercel Loyihasi:</strong> Global serverlarda 99.9% uptime bilan ishlamoqda.</div>
+            <div>2. <strong>Shift Academy Diplomi:</strong> 300+ soatlik Frontend kursi, muhrli va tasdiqlangan.</div>
+            <div>3. <strong>GitHub 1480+ Commitlar:</strong> (type-0713) toza manba kodlari to'liq ochiq.</div>
+            <div>4. <strong>3D WebGL & Texnologiyalar:</strong> Three.js, React va Web Audio API.</div>
+            <div>5. <strong>Google Search Console:</strong> Tasdiqlangan domen va 100/100 SEO indeksi.</div>
+            <div class="text-emerald-400 font-bold pt-1">«Baholash sizdan — 100% amaliy dalillar va ochiq manbalar bizdan!»</div>
+          </div>
+        `);
+        const auditSec = document.getElementById('evidence-audit');
+        if (auditSec) auditSec.scrollIntoView({ behavior: 'smooth' });
+        break;
+
       case 'tuman':
       case 'bosqich':
       case 'district':
@@ -991,24 +1045,6 @@ function initTerminal() {
             <div>• <strong>Yakuniy Manzil:</strong> Viloyat va Respublika bosqichida tumanimiz nomini birinchi o'ringa olib chiqish!</div>
           </div>
         `);
-        break;
-
-      case 'hakamlar':
-      case 'score':
-      case 'ball':
-        printLine(`
-          <div class="space-y-1 text-slate-300">
-            <div class="text-amber-300 font-bold">⚖️ HAKAMLAR BAHOLASH STANDARTI — 50/50 MAKSIMAL BALL:</div>
-            <div>1. Amaliy Natijadorlik (10 Vercel sayt) : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
-            <div>2. Kasbiy Malaka (Shift Academy Diplomi): <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
-            <div>3. Yuqori Texnologiyalar (Three.js 3D)  : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
-            <div>4. Tuman Miqyosidagi Aniq Dastur      : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
-            <div>5. GitHub Shaffofligi (1480+ Commit)  : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
-            <div class="text-yellow-400 font-bold pt-1">Umumiy Natija: 50 / 50 Ball (Mutlaq G'oliblik Kafolati)</div>
-          </div>
-        `);
-        const criteriaSec = document.getElementById('judges-criteria');
-        if (criteriaSec) criteriaSec.scrollIntoView({ behavior: 'smooth' });
         break;
 
       case 'compare':
@@ -1071,14 +1107,23 @@ function initNavigation() {
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener('click', () => {
+    mobileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       mobileMenu.classList.toggle('hidden');
+      if (typeof window.playUiSound === 'function') window.playUiSound('click');
     });
 
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+        if (typeof window.playUiSound === 'function') window.playUiSound('click');
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
     });
   }
 
