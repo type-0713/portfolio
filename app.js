@@ -37,6 +37,9 @@ function initAll() {
   safeInit('Modals', initModals);
   safeInit('Terminal', initTerminal);
   safeInit('Navigation', initNavigation);
+  safeInit('ScrollProgress', initScrollProgressBar);
+  safeInit('ScrollReveal', initScrollReveal);
+  safeInit('Counters', initCounters);
 }
 
 if (document.readyState === 'loading') {
@@ -771,12 +774,16 @@ function initTerminal() {
         printLine(`
           <div class="space-y-1 text-slate-300">
             <div><span class="text-yellow-300 font-bold">=== MAVJUD BUYRUQLAR RO'YXATI ===</span></div>
+            <div>• <span class="text-amber-400 font-bold">tuman</span> / <span class="text-amber-400 font-bold">bosqich</span> - Tuman bosqichi 2026 maqsadlari va missiyasi</div>
+            <div>• <span class="text-amber-400 font-bold">hakamlar</span> / <span class="text-amber-400 font-bold">score</span> - 5 Oltin mezon va 50/50 maksimal ball tahlili</div>
+            <div>• <span class="text-amber-400 font-bold">compare</span> / <span class="text-amber-400 font-bold">raqiblar</span> - Jasurbek vs Raqiblar ob'yektiv taqqoslash jadvali</div>
+            <div>• <span class="text-amber-400 font-bold">kubok</span> / <span class="text-amber-400 font-bold">champion</span> - Maktab bosqichi 1-o'rin kubogi va salyut</div>
             <div>• <span class="text-blue-400 font-bold">about</span> / <span class="text-blue-400 font-bold">bio</span> - Jasurbekning tarjimai holi va yetakchilik falsafasi</div>
             <div>• <span class="text-blue-400 font-bold">projects</span> - 10 ta Vercel loyihalari to'liq ro'yxati va domenlari</div>
             <div>• <span class="text-blue-400 font-bold">project &lt;nomi&gt;</span> - Loyiha haqida batafsil (masalan: project quiz, project 7buyuk)</div>
             <div>• <span class="text-blue-400 font-bold">skills</span> - Texnologiyalar foiz ko'rsatkichlari (ASCII progress bar)</div>
             <div>• <span class="text-blue-400 font-bold">cert</span> - Shift Academy Frontend sertifikati va baholari</div>
-            <div>• <span class="text-blue-400 font-bold">vision</span> - Maktab IT Yetakchisi saylov dasturining 5 ustuni</div>
+            <div>• <span class="text-blue-400 font-bold">vision</span> - Tuman IT Yetakchisi saylov dasturining 5 strategik ustuni</div>
             <div>• <span class="text-blue-400 font-bold">roadmap</span> - 4 oylik aniq muddatli harakatlar rejasi</div>
             <div>• <span class="text-blue-400 font-bold">partners</span> - Shift Academy, IT Park va Vercel ekosistemasi</div>
             <div>• <span class="text-blue-400 font-bold">matrix</span> - Yashil raqamli Matrix yomg'iri animatsiyasi</div>
@@ -973,6 +980,74 @@ function initTerminal() {
             <div>• Maktab: IT Kengashi va Yoshlar Ittifoqi binosi</div>
           </div>
         `);
+      case 'tuman':
+      case 'bosqich':
+      case 'district':
+        printLine(`
+          <div class="space-y-1.5 text-slate-300">
+            <div class="text-amber-400 font-bold">🏆 TUMAN BOSQICHI 2026 — JASURBEKNING STRATEGIK MAQSADI:</div>
+            <div>• <strong>Maktab G'olibi:</strong> Jasurbek maktab bosqichida 1-o'rinni mutlaq ustunlik bilan qo'lga kiritdi!</div>
+            <div>• <strong>Tuman Missiyasi:</strong> Tumanimiz maktablari o'quvchilari uchun bepul IT ta'limi, maktablararo hakatonlar va kuchli olimpiada terma jamoasini tuzish.</div>
+            <div>• <strong>Yakuniy Manzil:</strong> Viloyat va Respublika bosqichida tumanimiz nomini birinchi o'ringa olib chiqish!</div>
+          </div>
+        `);
+        break;
+
+      case 'hakamlar':
+      case 'score':
+      case 'ball':
+        printLine(`
+          <div class="space-y-1 text-slate-300">
+            <div class="text-amber-300 font-bold">⚖️ HAKAMLAR BAHOLASH STANDARTI — 50/50 MAKSIMAL BALL:</div>
+            <div>1. Amaliy Natijadorlik (10 Vercel sayt) : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
+            <div>2. Kasbiy Malaka (Shift Academy Diplomi): <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
+            <div>3. Yuqori Texnologiyalar (Three.js 3D)  : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
+            <div>4. Tuman Miqyosidagi Aniq Dastur      : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
+            <div>5. GitHub Shaffofligi (1480+ Commit)  : <span class="text-emerald-400 font-bold">10 / 10 Ball</span></div>
+            <div class="text-yellow-400 font-bold pt-1">Umumiy Natija: 50 / 50 Ball (Mutlaq G'oliblik Kafolati)</div>
+          </div>
+        `);
+        const criteriaSec = document.getElementById('judges-criteria');
+        if (criteriaSec) criteriaSec.scrollIntoView({ behavior: 'smooth' });
+        break;
+
+      case 'compare':
+      case 'raqiblar':
+      case 'taqqoslash':
+        printLine(`
+          <div class="space-y-1 text-slate-300">
+            <div class="text-blue-400 font-bold">⚔️ OB'YEKTIV TAQQOSLASH (JASURBEK VS RAQIBLAR):</div>
+            <div>• <strong>Jonli Saytlar:</strong> Jasurbek: 10 ta Vercel platformasi | Raqiblar: 0 ta (faqat slaydlar)</div>
+            <div>• <strong>Sertifikat:</strong> Jasurbek: Shift Academy Diplomi | Raqiblar: Rasmiy sertifikat yo'q</div>
+            <div>• <strong>3D Innovatsiya:</strong> Jasurbek: Three.js WebGL & React | Raqiblar: Mavjud emas</div>
+            <div>• <strong>GitHub:</strong> Jasurbek: 1480+ Commit (type-0713) | Raqiblar: Bo'sh akkaunt</div>
+            <div class="text-emerald-400 font-bold">Xulosa: Birinchi qarashdayoq mutlaq ustunlik isbotlangan!</div>
+          </div>
+        `);
+        const compSec = document.getElementById('comparison');
+        if (compSec) compSec.scrollIntoView({ behavior: 'smooth' });
+        break;
+
+      case 'kubok':
+      case 'champion':
+      case 'winner':
+        printLine(`
+          <div class="text-amber-400 font-mono text-xs leading-none py-1 whitespace-pre">
+      ___________
+     '._==_==_=_.'
+     .-\\:      /-.
+    | (|:.     |) |
+     '-|:.     |-'
+       \\::.    /
+        '::. .'
+          ) (
+        _.' '._
+       '-------'
+          </div>
+          <div class="text-amber-300 font-bold">🥇 1-O'RIN: MAKTAB BOSQICHI MUTLAQ G'OLIBI!</div>
+          <div class="text-slate-300 text-xs">Jasurbek Zokirjonov — Tuman IT Cho'qqisini zabt etish sari olg'a!</div>
+        `);
+        if (typeof triggerConfettiBlast === 'function') triggerConfettiBlast();
         break;
 
       case 'clear':
@@ -1028,3 +1103,109 @@ function initNavigation() {
     });
   });
 }
+
+/* ==============================================================================
+   11. SCROLL PROGRESS BAR (TOP GLOWING TRACKER)
+   ============================================================================== */
+function initScrollProgressBar() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+
+  function updateProgress() {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight <= 0) {
+      bar.style.width = '0%';
+      return;
+    }
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop || 0;
+    const progress = Math.min(100, Math.max(0, (currentScroll / totalHeight) * 100));
+    bar.style.width = `${progress}%`;
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress, { passive: true });
+  updateProgress();
+}
+
+/* ==============================================================================
+   12. STAGGERED SCROLL REVEAL (INTERSECTION OBSERVER ENGINE)
+   ============================================================================== */
+function initScrollReveal() {
+  const elements = document.querySelectorAll('.reveal-init');
+  if (!elements.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1
+  });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+/* ==============================================================================
+   13. ANIMATED METRIC COUNTERS
+   ============================================================================== */
+function initCounters() {
+  const counters = document.querySelectorAll('[data-counter]');
+  if (!counters.length) return;
+
+  function animateCounter(el) {
+    if (el.dataset.animated === 'true') return;
+    el.dataset.animated = 'true';
+
+    const target = parseInt(el.dataset.counter, 10);
+    if (isNaN(target)) return;
+
+    const duration = 1600;
+    const startTime = performance.now();
+    const prefix = el.dataset.counterPrefix || '';
+    const suffix = el.dataset.counterSuffix || (el.innerText.includes('+') ? '+' : (el.innerText.includes('%') ? '%' : ''));
+
+    function step(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out quartic
+      const ease = 1 - Math.pow(1 - progress, 4);
+      const currentVal = Math.round(ease * target);
+      el.textContent = `${prefix}${currentVal}${suffix}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = `${prefix}${target}${suffix}`;
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(c => animateCounter(c));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  counters.forEach(c => observer.observe(c));
+}
+

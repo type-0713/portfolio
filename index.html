@@ -105,6 +105,9 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
 
+  <!-- Top Reading Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
   <!-- Interactive Background Canvas for 3D Cyber Particles -->
   <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
@@ -120,31 +123,32 @@
       
       <!-- Logo & Candidate Badge -->
       <a href="#hero" class="flex items-center gap-3 group">
-        <div class="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 text-white font-black text-lg shadow-md shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
+        <div class="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 via-blue-600 to-indigo-600 text-white font-black text-lg shadow-md shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
           JZ
-          <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></span>
+          <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-amber-400 border-2 border-white rounded-full flex items-center justify-center text-[8px]">★</span>
         </div>
         <div>
           <div class="font-extrabold text-slate-900 tracking-tight flex items-center gap-2 text-base sm:text-lg">
             Jasurbek Zokirjonov
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
-              #IT_Yetakchi
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
+              🥇 Maktab G'olibi • Tuman Nomzodi
             </span>
           </div>
-          <p class="text-xs text-slate-500 font-medium">Maktab IT Sohasi Yetakchisi Nomzodi</p>
+          <p class="text-xs text-slate-500 font-medium">Tuman IT Sohasi Yetakchisi Nomzodi • 2026</p>
         </div>
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60 text-sm font-semibold text-slate-600">
-        <a href="#hero" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white active">Bosh Sahifa</a>
-        <a href="#manifest" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Saylov Dasturi</a>
-        <a href="#projects" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">10 ta Real Loyiha</a>
-        <a href="#certificate" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Sertifikat</a>
-        <a href="#roadmap" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Yo'l Xaritasi</a>
-        <a href="#why-me" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Nega Jasurbek?</a>
-        <a href="#terminal-section" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Terminal</a>
-        <a href="#partners-promo" class="nav-link px-4 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Ekosistema & Reklama</a>
+      <nav class="hidden xl:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60 text-xs font-semibold text-slate-600">
+        <a href="#hero" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white active">Bosh Sahifa</a>
+        <a href="#judges-criteria" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-amber-600 hover:bg-white text-amber-700 font-bold">🏆 Hakamlar Mezonlari</a>
+        <a href="#comparison" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">⚔️ Taqqoslash</a>
+        <a href="#manifest" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Tuman Strategiyasi</a>
+        <a href="#projects" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">10 Vercel Loyiha</a>
+        <a href="#certificate" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Sertifikat</a>
+        <a href="#roadmap" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Yo'l Xaritasi</a>
+        <a href="#terminal-section" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Terminal</a>
+        <a href="#activity-schedule" class="nav-link px-3.5 py-1.5 rounded-full transition hover:text-blue-600 hover:bg-white">Faollik & Jadval</a>
       </nav>
 
       <!-- Action Button: GitHub Project -->
@@ -152,11 +156,11 @@
         <a href="https://github.com/type-0713/portfolio" target="_blank" rel="noopener noreferrer" class="relative group overflow-hidden px-5 py-2.5 rounded-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-sm shadow-md hover:shadow-blue-500/25 hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-2">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           <span>GitHub Kod</span>
-          <span class="inline-flex items-center justify-center bg-white/20 px-2 py-0.5 rounded-full text-xs font-black">v2.0</span>
+          <span class="inline-flex items-center justify-center bg-white/20 px-2 py-0.5 rounded-full text-xs font-black">v3.0</span>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 focus:outline-none" aria-label="Menyu">
+        <button id="mobile-menu-btn" class="xl:hidden p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 focus:outline-none" aria-label="Menyu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -166,10 +170,12 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-5 shadow-xl transition-all">
+    <div id="mobile-menu" class="hidden xl:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-5 shadow-xl transition-all">
       <div class="flex flex-col gap-3 font-semibold text-slate-700">
         <a href="#hero" class="mobile-link py-2 border-b border-slate-100">🏠 Bosh Sahifa</a>
-        <a href="#manifest" class="mobile-link py-2 border-b border-slate-100">📋 Saylov Dasturi (Tashabbuslar)</a>
+        <a href="#judges-criteria" class="mobile-link py-2 border-b border-slate-100 text-amber-700 font-bold">🏆 Hakamlar Mezonlari (50/50)</a>
+        <a href="#comparison" class="mobile-link py-2 border-b border-slate-100 text-blue-700 font-bold">⚔️ Raqiblar Bilan Taqqoslash</a>
+        <a href="#manifest" class="mobile-link py-2 border-b border-slate-100">📋 Tuman IT Strategiyasi</a>
         <a href="#projects" class="mobile-link py-2 border-b border-slate-100">💻 10 ta Real Loyiha (Vercel)</a>
         <a href="#certificate" class="mobile-link py-2 border-b border-slate-100">🎓 Shift Academy Sertifikati</a>
         <a href="#roadmap" class="mobile-link py-2 border-b border-slate-100">🗺️ 4 Oylik Harakatlar Rejasi</a>
@@ -190,7 +196,7 @@
     <section id="hero" class="min-h-[92vh] flex items-center relative py-12 lg:py-16">
       
       <!-- Ambient Glow Orbs -->
-      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-blue-400/15 via-indigo-300/15 to-purple-300/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-amber-400/15 via-blue-300/15 to-purple-300/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -198,74 +204,73 @@
           <!-- Left Column: Manifesto & Value Proposition -->
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            <!-- Candidate Status Badge -->
-            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-blue-200/90 shadow-sm text-xs sm:text-sm font-bold text-slate-800">
-              <span class="flex h-2.5 w-2.5 relative">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+            <!-- District Champion Victory Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-amber-50 via-white to-blue-50 border border-amber-300 shadow-md text-xs sm:text-sm font-black text-slate-900 reveal-init" data-reveal="zoom-in">
+              <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
               </span>
-              <span>Maktab IT Sohasi Yetakchisi Uchun Rasmiy Nomzod</span>
-              <span class="text-blue-600 font-black ml-1">2026</span>
+              <span>🏆 MAKTAB BOSQICHI MUTLAQ G'OLIBI (1-O'RIN)</span>
+              <span class="px-2 py-0.5 rounded-full bg-blue-600 text-white text-[11px] font-bold">🚀 TUMAN BOSQICHI 2026</span>
             </div>
 
             <!-- Big Powerful Heading -->
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
-              Kelajak Texnologiyalarini <br>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">
-                Bugun Maktabimizga
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12] reveal-init" data-reveal="fade-up">
+              Maktabda 1-O'rinni Egalladik! <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-amber-500">
+                Endi Tuman IT Cho'qqisini
               </span> <br>
-              Birgalikda Olib Kiramiz!
+              Birgalikda Zabt Etamiz!
             </h1>
 
-            <!-- Catchy Subtitle (Balanced, Dignified & Inspiring Praise) -->
-            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              Assalomu alaykum! Men <strong class="text-slate-900 font-extrabold">Jasurbek Zokirjonov</strong> — Frontend dasturchi, 
-              <span class="text-blue-600 font-bold">10 ta faol Vercel loyihasi</span> yaratuvchisi va 
-              <strong class="text-slate-900 font-bold">Shift Academy</strong> professional bitiruvchisiman. 
-              Mening maqsadim — shunchaki yetakchi bo'lish emas, balki maktabimizdagi har bir tengdoshimga zamonaviy dasturlashni bepul o'rgatish, iqtidorli jamoa tuzish va maktabimizni respublika miqyosida birinchi o'ringa olib chiqishdir!
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal reveal-init delay-100" data-reveal="fade-up">
+              Assalomu alaykum, muhtaram hakamlar hay'ati va aziz tengdoshlar! Men <strong class="text-slate-900 font-extrabold">Jasurbek Zokirjonov</strong> — maktab bosqichi mutlaq g'olibi, 
+              <span class="text-blue-600 font-bold">10 ta faol Vercel platformasi</span> yaratuvchisi va 
+              <strong class="text-slate-900 font-bold">Shift Academy</strong> Frontend diplomi sohibiman. 
+              Mening maqsadim — tumanimiz yoshlari uchun haqiqiy amaliy IT maktabini yo'lga qo'yish, olimpiada terma jamoasini tuzish va tumanimiz nufuzini Respublika bosqichida birinchi o'ringa olib chiqishdir!
             </p>
 
-            <!-- Key Metric Pillars -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-blue-300 transition group">
-                <div class="text-2xl sm:text-3xl font-black text-blue-600 group-hover:scale-105 transition-transform">10+</div>
-                <div class="text-xs font-bold text-slate-500 mt-1">Real Vercel Loyihalari</div>
+            <!-- Key Metric Pillars with Animated Counters -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 reveal-init delay-200" data-reveal="fade-up">
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-amber-400 transition group tilt-card">
+                <div class="text-2xl sm:text-3xl font-black text-amber-500 group-hover:scale-105 transition-transform">🥇 1-o'rin</div>
+                <div class="text-xs font-bold text-slate-600 mt-1">Maktab G'olibi</div>
               </div>
-              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-indigo-300 transition group">
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-blue-400 transition group tilt-card">
+                <div class="text-2xl sm:text-3xl font-black text-blue-600 group-hover:scale-105 transition-transform" data-counter="10">10+</div>
+                <div class="text-xs font-bold text-slate-600 mt-1">Jonli Vercel Sayt</div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-indigo-400 transition group tilt-card">
                 <div class="text-2xl sm:text-3xl font-black text-indigo-600 group-hover:scale-105 transition-transform">100%</div>
-                <div class="text-xs font-bold text-slate-500 mt-1">Sertifikatlangan (Shift)</div>
+                <div class="text-xs font-bold text-slate-600 mt-1">Shift Diplomi</div>
               </div>
-              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-violet-300 transition group">
-                <div class="text-2xl sm:text-3xl font-black text-violet-600 group-hover:scale-105 transition-transform">3D Web</div>
-                <div class="text-xs font-bold text-slate-500 mt-1">Three.js & Interaktivlik</div>
-              </div>
-              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-emerald-300 transition group">
-                <div class="text-2xl sm:text-3xl font-black text-emerald-600 group-hover:scale-105 transition-transform">0 so'm</div>
-                <div class="text-xs font-bold text-slate-500 mt-1">Bepul IT Ta'lim</div>
+              <div class="p-3.5 rounded-2xl bg-white/90 border border-slate-200/80 shadow-sm hover:border-emerald-400 transition group tilt-card">
+                <div class="text-2xl sm:text-3xl font-black text-emerald-600 group-hover:scale-105 transition-transform" data-counter="1480">1480+</div>
+                <div class="text-xs font-bold text-slate-600 mt-1">Git Commitlar</div>
               </div>
             </div>
 
             <!-- Action Buttons -->
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-              <a href="#manifest" class="px-7 py-3.5 rounded-2xl bg-slate-900 hover:bg-blue-600 text-white font-extrabold text-sm shadow-xl shadow-slate-900/10 hover:shadow-blue-500/25 transition-all flex items-center gap-2.5">
-                <span>📋 Saylov Dasturim</span>
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-4 reveal-init delay-300" data-reveal="fade-up">
+              <a href="#judges-criteria" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white font-extrabold text-sm shadow-xl shadow-amber-500/20 transition-all flex items-center gap-2">
+                <span>🏆 Hakamlar Bahosi (50/50)</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
 
-              <a href="#projects" class="px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-extrabold text-sm border border-slate-200 shadow-sm hover:border-blue-300 transition-all flex items-center gap-2">
-                <span>💻 10 ta Loyiham</span>
-                <span class="px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 text-xs font-bold">Jonli Vercel</span>
+              <a href="#comparison" class="px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-blue-600 text-white font-extrabold text-sm shadow-md transition-all flex items-center gap-2">
+                <span>⚔️ Ob'yektiv Taqqoslash</span>
               </a>
 
-              <a href="#certificate" class="px-6 py-3.5 rounded-2xl bg-blue-50 hover:bg-blue-100 text-blue-700 font-extrabold text-sm border border-blue-200/80 transition-all flex items-center gap-2">
-                <span>🎓 Shift Sertifikati</span>
+              <a href="#projects" class="px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-extrabold text-sm border border-slate-200 shadow-sm hover:border-blue-300 transition-all flex items-center gap-2">
+                <span>💻 10 ta Vercel Loyiham</span>
               </a>
             </div>
 
             <!-- Live Status Quote -->
-            <div class="p-3.5 rounded-2xl bg-blue-50/60 border border-blue-200/70 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-700 font-semibold">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0 animate-ping"></span>
-              <span>"Mening asosiy kuchim — quruq va'da berishda emas, balki 10 ta tayyor loyiham kabi aniq amaliy natija va tengdoshlarimga beg'araz ilm ulashishdadir!"</span>
+            <div class="p-3.5 rounded-2xl bg-gradient-to-r from-amber-50/70 via-blue-50/50 to-indigo-50/50 border border-amber-200/80 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-700 font-semibold reveal-init delay-400" data-reveal="fade-up">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0 animate-ping"></span>
+              <span>"Haqiqiy g'oliblik chiroyli so'zlar bilan emas, balki 10 ta jonli ishlaydigan veb-platforma, 3D innovatsiyalar va tengdoshlarga beg'araz ilm ulashish bilan isbotlanadi!"</span>
             </div>
 
           </div>
@@ -369,40 +374,494 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 2: SAYLOV DASTURI (MANIFEST & PILLARS) WITH INTERACTIVE TABS     -->
+    <!-- SECTION: HAKAMLAR HAY'ATI UCHUN 5 OLTIN MEZON VA 50/50 MAKSIMAL BALL      -->
     <!-- ========================================================================= -->
-    <section id="manifest" class="py-20 relative bg-white border-y border-slate-200/80">
+    <section id="judges-criteria" class="py-20 relative bg-gradient-to-b from-white via-amber-50/20 to-white border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-300 text-amber-800 text-xs font-black tracking-wider uppercase shadow-xs reveal-init" data-reveal="zoom-in">
+            <span>🏆 HAKAMLAR HAY'ATI VA EKSPERTLAR UCHUN • 50/50 BALL KAFOLATI</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight reveal-init delay-100" data-reveal="fade-up">
+            5 Oltin Mezon Bo'yicha <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500">
+              50/50 Maksimal Natija
+            </span>
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed reveal-init delay-200" data-reveal="fade-up">
+            Nega Jasurbek Zokirjonov tuman bosqichida eng munosib va yagona mutlaq yetakchi nomzod? Rasmiy tanlov mezonlari asosida har bir yo'nalish bo'yicha aniq dalil va isbotlar:
+          </p>
+        </div>
+
+        <!-- Grand Score Counter Board -->
+        <div class="mt-12 max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-2xl relative overflow-hidden reveal-init delay-200" data-reveal="zoom-in">
+          <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-10 -top-10 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+            <div class="md:col-span-5 text-center md:text-left space-y-2">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">Umumiy Hakamlar Bahosi</span>
+              <div class="text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-white flex items-center justify-center md:justify-start gap-2">
+                <span data-counter="50">50</span>
+                <span class="text-3xl sm:text-4xl text-slate-400 font-bold">/ 50</span>
+              </div>
+              <div class="text-sm font-bold text-amber-400 flex items-center justify-center md:justify-start gap-2">
+                <span>★★★★★</span> 100% Maksimal Ball
+              </div>
+              <p class="text-xs text-slate-300">Har bir mezon bo'yicha mustaqil komissiya va ekspertlar uchun to'liq hujjatlashtirilgan ochiq dalillar.</p>
+            </div>
+
+            <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="p-3 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+                <div class="text-xl font-black text-amber-400">10 / 10</div>
+                <div class="text-[11px] font-bold text-slate-200 mt-0.5">Amaliy Loyihalar</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">10 Vercel sayt</div>
+              </div>
+              <div class="p-3 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+                <div class="text-xl font-black text-blue-400">10 / 10</div>
+                <div class="text-[11px] font-bold text-slate-200 mt-0.5">Rasmiy Diplom</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">Shift Academy</div>
+              </div>
+              <div class="p-3 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+                <div class="text-xl font-black text-purple-400">10 / 10</div>
+                <div class="text-[11px] font-bold text-slate-200 mt-0.5">3D & Innovatsiya</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">Three.js WebGL</div>
+              </div>
+              <div class="p-3 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+                <div class="text-xl font-black text-emerald-400">10 / 10</div>
+                <div class="text-[11px] font-bold text-slate-200 mt-0.5">Tuman Dasturi</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">4 oylik aniq reja</div>
+              </div>
+              <div class="p-3 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+                <div class="text-xl font-black text-cyan-400">10 / 10</div>
+                <div class="text-[11px] font-bold text-slate-200 mt-0.5">GitHub & Kod</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">1480+ Commit</div>
+              </div>
+              <div class="p-3 rounded-2xl bg-gradient-to-br from-amber-500/30 to-amber-600/30 border border-amber-400/50 backdrop-blur-md flex flex-col justify-center text-center">
+                <span class="text-base font-black text-amber-300">🥇 1-O'RIN</span>
+                <span class="text-[10px] font-bold text-white">Mutlaq G'oliblik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Detailed Criteria Cards -->
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Mezon 1 -->
+          <div class="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400 transition-all group reveal-init delay-100" data-reveal="fade-up">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-black">Mezon #1</span>
+              <span class="text-sm font-black text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">10 / 10 Ball</span>
+            </div>
+            <div class="mt-4 space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                💻
+              </div>
+              <h3 class="text-lg font-black text-slate-900">Amaliy Natijadorlik & Vercel Loyihalari</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Raqiblar shunchaki PowerPoint slayd ko'rsatganda, Jasurbek <strong>10 ta jonli ishlab turgan Vercel veb-loyihasi</strong>ni taqdim etadi. Har bir sayt global serverlarda real faoliyat yuritmoqda.
+              </p>
+              <div class="pt-2">
+                <div class="flex justify-between text-[11px] font-bold text-slate-700 mb-1">
+                  <span>Muvofiqlik Darajasi</span>
+                  <span class="text-amber-600">100%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                  <div class="h-full bg-amber-500 rounded-full w-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mezon 2 -->
+          <div class="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all group reveal-init delay-200" data-reveal="fade-up">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-black">Mezon #2</span>
+              <span class="text-sm font-black text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">10 / 10 Ball</span>
+            </div>
+            <div class="mt-4 space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                🎓
+              </div>
+              <h3 class="text-lg font-black text-slate-900">Kasbiy Malaka & Rasmiy Sertifikat</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Toshkentning nufuzli <strong>Shift Academy</strong> ta'lim markazining professional "Frontend Web Development" dasturi bo'yicha rasmiy muhrli va tasdiqlangan sertifikat egasi.
+              </p>
+              <div class="pt-2">
+                <div class="flex justify-between text-[11px] font-bold text-slate-700 mb-1">
+                  <span>Muvofiqlik Darajasi</span>
+                  <span class="text-blue-600">100%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                  <div class="h-full bg-blue-600 rounded-full w-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mezon 3 -->
+          <div class="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-purple-400 transition-all group reveal-init delay-300" data-reveal="fade-up">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-black">Mezon #3</span>
+              <span class="text-sm font-black text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">10 / 10 Ball</span>
+            </div>
+            <div class="mt-4 space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                ⚡
+              </div>
+              <h3 class="text-lg font-black text-slate-900">Yuqori Texnologiyalar & 3D WebGL</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Tuman miqyosida ilk bor <strong>Three.js 3D WebGL</strong> texnologiyalarini maktab ta'limiga olib kirgan. "Ravshan dostoni 3D Quiz" va "7 Buyuk Shaxs 3D" darslarni zamonaviy formatga aylantiradi.
+              </p>
+              <div class="pt-2">
+                <div class="flex justify-between text-[11px] font-bold text-slate-700 mb-1">
+                  <span>Muvofiqlik Darajasi</span>
+                  <span class="text-purple-600">100%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                  <div class="h-full bg-purple-600 rounded-full w-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mezon 4 -->
+          <div class="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-400 transition-all group reveal-init delay-100" data-reveal="fade-up">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-black">Mezon #4</span>
+              <span class="text-sm font-black text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">10 / 10 Ball</span>
+            </div>
+            <div class="mt-4 space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                📋
+              </div>
+              <h3 class="text-lg font-black text-slate-900">Tuman Qamrovi & Bepul Ta'lim Dasturi</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Shunchaki so'z emas: tuman maktablari uchun <strong>bepul "IT Start" to'garaklari</strong>, tayyor metodik qo'llanmalar, olimpiada terma jamoasi va aniq 4 oylik yo'l xaritasi mavjud.
+              </p>
+              <div class="pt-2">
+                <div class="flex justify-between text-[11px] font-bold text-slate-700 mb-1">
+                  <span>Muvofiqlik Darajasi</span>
+                  <span class="text-emerald-600">100%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                  <div class="h-full bg-emerald-600 rounded-full w-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mezon 5 -->
+          <div class="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-indigo-400 transition-all group reveal-init delay-200" data-reveal="fade-up">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-black">Mezon #5</span>
+              <span class="text-sm font-black text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">10 / 10 Ball</span>
+            </div>
+            <div class="mt-4 space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                🐙
+              </div>
+              <h3 class="text-lg font-black text-slate-900">Shaffoflik & 1480+ Git Commitlar</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                GitHub-da <strong>type-0713</strong> profili ochiq, 1480+ commitlar va mustaqil yozilgan minglab qator kodlar. Hakamlar va ekspertlar har bir loyiha kodini istalgan daqiqada tekshirishi mumkin.
+              </p>
+              <div class="pt-2">
+                <div class="flex justify-between text-[11px] font-bold text-slate-700 mb-1">
+                  <span>Muvofiqlik Darajasi</span>
+                  <span class="text-indigo-600">100%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                  <div class="h-full bg-indigo-600 rounded-full w-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verdict CTA Card -->
+          <div class="p-7 rounded-3xl bg-gradient-to-br from-amber-500 to-amber-700 text-white shadow-xl flex flex-col justify-between group reveal-init delay-300" data-reveal="fade-up">
+            <div class="space-y-3">
+              <span class="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-black">Hakamlar Xulosasi</span>
+              <h3 class="text-xl font-black text-white">Mutlaq Ustunlik & 1-O'rin</h3>
+              <p class="text-xs text-amber-100 leading-relaxed">
+                Ushbu mezonlar Jasurbek Zokirjonov nafaqat maktab, balki tuman sha'nini Respublika miqyosida birinchi o'ringa olib chiqishga to'liq qodirligini kafolatlaydi!
+              </p>
+            </div>
+            <div class="pt-6">
+              <a href="#comparison" class="w-full py-3 rounded-2xl bg-white hover:bg-slate-100 text-amber-900 font-extrabold text-xs text-center flex items-center justify-center gap-2 transition shadow-md">
+                <span>Raqiblar Bilan Taqqoslashni Ko'rish</span>
+                <span>↓</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION: OB'YEKTIV TAQQOSLASH (JASURBEK VS BOSHQA NOMZODLAR)             -->
+    <!-- ========================================================================= -->
+    <section id="comparison" class="py-20 relative bg-white border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-black tracking-wider uppercase shadow-xs reveal-init" data-reveal="zoom-in">
+            <span>⚔️ HAQIQAT RAQAMLARDA • OB'YEKTIV TAQQOSLASH</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight reveal-init delay-100" data-reveal="fade-up">
+            Jasurbek Zokirjonov <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-amber-500">
+              va Boshqa Nomzodlar O'rtasidagi Farq
+            </span>
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed reveal-init delay-200" data-reveal="fade-up">
+            Bir qarashdayoq kim haqiqiy IT muhandisi va kim shunchaki qog'ozdagi nomzod ekanligi ayon. O'zingiz baho bering:
+          </p>
+        </div>
+
+        <!-- Glass Table Container -->
+        <div class="mt-12 overflow-x-auto rounded-3xl border border-slate-200 shadow-xl bg-white reveal-init delay-200" data-reveal="fade-up">
+          <table class="w-full text-left border-collapse glass-table min-w-[700px]">
+            <thead>
+              <tr class="border-b border-slate-200 text-xs font-black uppercase text-slate-700 tracking-wider">
+                <th class="p-5 bg-slate-50/80 w-1/4">Baholash Mezoni</th>
+                <th class="p-5 bg-blue-50/90 text-blue-900 w-1/3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-amber-400 text-slate-900 flex items-center justify-center text-xs">🥇</span>
+                    <span>Jasurbek Zokirjonov (Maktab G'olibi)</span>
+                  </div>
+                </th>
+                <th class="p-5 bg-slate-50/80 text-slate-500 w-1/4">Boshqa Nomzodlar / Raqiblar</th>
+                <th class="p-5 bg-slate-50/80 text-slate-700 text-center">Ustunlik</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-sm">
+              
+              <!-- Row 1 -->
+              <tr class="transition-colors hover:bg-blue-50/40">
+                <td class="p-5 font-bold text-slate-900">
+                  <div class="flex items-center gap-2">
+                    <span class="text-blue-600">🌐</span>
+                    <span>Jonli Ishlayotgan Veb-Saytlar</span>
+                  </div>
+                  <div class="text-[11px] text-slate-400 font-normal mt-0.5">Real Vercel platformalari</div>
+                </td>
+                <td class="p-5 font-extrabold text-blue-700 bg-blue-50/30">
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-black">✓</span>
+                    <span>10 ta jonli ishlab turgan platforma</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 font-medium mt-0.5">Ravshan dostoni 3D, 7-Buyuk-Shaxs, Kurs platformasi va h.k.</div>
+                </td>
+                <td class="p-5 text-slate-500">
+                  <div class="flex items-center gap-1.5 text-rose-500 font-bold">
+                    <span>✕</span> 0 ta jonli loyiha
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Faqat PowerPoint slayd yoki tayyor shablon</div>
+                </td>
+                <td class="p-5 text-center">
+                  <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-black text-xs border border-emerald-200">
+                    Cheksiz Ustunlik (+100%)
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr class="transition-colors hover:bg-blue-50/40">
+                <td class="p-5 font-bold text-slate-900">
+                  <div class="flex items-center gap-2">
+                    <span class="text-indigo-600">🎓</span>
+                    <span>Kasbiy Dasturlash Diplomi</span>
+                  </div>
+                  <div class="text-[11px] text-slate-400 font-normal mt-0.5">Akkreditatsiyadan o'tgan kurs</div>
+                </td>
+                <td class="p-5 font-extrabold text-blue-700 bg-blue-50/30">
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-black">✓</span>
+                    <span>Shift Academy Rasmiy Frontend Diplomi</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 font-medium mt-0.5">300+ soat amaliyot, rasmiy muhr va QR tekshiruv</div>
+                </td>
+                <td class="p-5 text-slate-500">
+                  <div class="flex items-center gap-1.5 text-rose-500 font-bold">
+                    <span>✕</span> Rasmiy diplom yo'q
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Faqat havaskor darajadagi tushunchalar</div>
+                </td>
+                <td class="p-5 text-center">
+                  <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-black text-xs border border-blue-200">
+                    Professional Daraja
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr class="transition-colors hover:bg-blue-50/40">
+                <td class="p-5 font-bold text-slate-900">
+                  <div class="flex items-center gap-2">
+                    <span class="text-purple-600">⚡</span>
+                    <span>3D Web & Zamonaviy Texnologiyalar</span>
+                  </div>
+                  <div class="text-[11px] text-slate-400 font-normal mt-0.5">WebGL, Three.js, React</div>
+                </td>
+                <td class="p-5 font-extrabold text-blue-700 bg-blue-50/30">
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-black">✓</span>
+                    <span>Three.js 3D WebGL, React, Web Audio API</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 font-medium mt-0.5">Interaktiv 3D fano, zamonaviy animatsiyalar</div>
+                </td>
+                <td class="p-5 text-slate-500">
+                  <div class="flex items-center gap-1.5 text-slate-400">
+                    <span>—</span> Quruq matn va rasmlar
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">3D va interaktivlik mavjud emas</div>
+                </td>
+                <td class="p-5 text-center">
+                  <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-700 font-black text-xs border border-purple-200">
+                    Innovatsion Texnologiya
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr class="transition-colors hover:bg-blue-50/40">
+                <td class="p-5 font-bold text-slate-900">
+                  <div class="flex items-center gap-2">
+                    <span class="text-cyan-600">🐙</span>
+                    <span>GitHub Faolligi & Kod Shaffofligi</span>
+                  </div>
+                  <div class="text-[11px] text-slate-400 font-normal mt-0.5">Ochiq manbali repozitoriylar</div>
+                </td>
+                <td class="p-5 font-extrabold text-blue-700 bg-blue-50/30">
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-black">✓</span>
+                    <span>1480+ Commit, ochiq GitHub (type-0713)</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 font-medium mt-0.5">Har bir kod qatori isbotlangan va tekshirish uchun ochiq</div>
+                </td>
+                <td class="p-5 text-slate-500">
+                  <div class="flex items-center gap-1.5 text-rose-500 font-bold">
+                    <span>✕</span> GitHub akkaunti yo'q yoki bo'sh
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Kod yozish mahorati isbotlanmagan</div>
+                </td>
+                <td class="p-5 text-center">
+                  <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 font-black text-xs border border-cyan-200">
+                    100% Shaffof & Ochiq
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Row 5 -->
+              <tr class="transition-colors hover:bg-blue-50/40">
+                <td class="p-5 font-bold text-slate-900">
+                  <div class="flex items-center gap-2">
+                    <span class="text-amber-600">🎯</span>
+                    <span>Tuman Miqyosidagi Aniq Reja</span>
+                  </div>
+                  <div class="text-[11px] text-slate-400 font-normal mt-0.5">Real tadbirlar va to'garaklar</div>
+                </td>
+                <td class="p-5 font-extrabold text-blue-700 bg-blue-50/30">
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-black">✓</span>
+                    <span>Bepul to'garak, olimpiada jamoasi, 4 oylik reja</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 font-medium mt-0.5">O'quv dasturlari va metodika to'liq tayyor</div>
+                </td>
+                <td class="p-5 text-slate-500">
+                  <div class="flex items-center gap-1.5 text-slate-400">
+                    <span>—</span> Umumiy va noaniq va'dalar
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Harakatlar rejasi mavjud emas</div>
+                </td>
+                <td class="p-5 text-center">
+                  <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-black text-xs border border-amber-200">
+                    Aniq & Amaliy Reja
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Row 6: Score Summary -->
+              <tr class="bg-gradient-to-r from-amber-50/60 via-blue-50/60 to-amber-50/60 font-black text-base">
+                <td class="p-5 font-black text-slate-900">
+                  🏆 Hakamlar Hay'ati Bahosi
+                </td>
+                <td class="p-5 text-xl font-black text-amber-600">
+                  50 / 50 BALL (100%)
+                </td>
+                <td class="p-5 text-slate-400 font-bold">
+                  25 - 35 Ball
+                </td>
+                <td class="p-5 text-center">
+                  <span class="px-4 py-1.5 rounded-full bg-amber-500 text-white text-xs font-black shadow-sm">
+                    🥇 Mutlaq G'alaba!
+                  </span>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Callout Banner -->
+        <div class="mt-8 p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl reveal-init delay-300" data-reveal="fade-up">
+          <div class="space-y-1.5 text-center md:text-left">
+            <h4 class="text-lg font-black text-white flex items-center justify-center md:justify-start gap-2">
+              <span>🎯 Xulosa:</span> Tuman IT Cho'qqisini Faqat Amaliy Dasturchi Egallaydi!
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+              Jasurbek Zokirjonov nafaqat so'zda, balki real 10 ta Vercel platformasi, professional diplomi va tinimsiz mehnati bilan tumanimiz sha'nini Respublika miqyosida munosib himoya qilishga tayyor.
+            </p>
+          </div>
+          <a href="#projects" class="px-6 py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-xs sm:text-sm flex-shrink-0 transition shadow-lg shadow-amber-500/20">
+            💻 10 ta Loyihani Sinab Ko'rish ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: STRATEGIK SAYLOV DASTURI (TUMAN MIQYOSIDAGI ISLOHOTLAR)       -->
+    <!-- ========================================================================= -->
+    <section id="manifest" class="py-20 relative bg-white border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Title -->
         <div class="text-center max-w-3xl mx-auto space-y-4">
-          <span class="px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase">
-            Nomzodlik Rejasi & Tashabbuslar
+          <span class="px-3.5 py-1 rounded-full bg-gradient-to-r from-blue-50 to-amber-50 text-blue-700 border border-blue-200 text-xs font-bold tracking-wider uppercase">
+            Tuman IT Yetakchisi Nomzodi • Strategik Yo'nalishlar
           </span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Maktab IT Yetakchisi Sifatidagi Saylov Dasturim
+            Maktabdan Tuman Cho'qqisiga: 5 Ta Asosiy Strategik Yo'nalish
           </h2>
           <p class="text-slate-600 text-base leading-relaxed">
-            Men maktabimizda IT sohasini shunchaki nomiga emas, har bir sinf xonasida, har bir qiziquvchi o'quvchi hayotida aniq natijalar bilan rivojlantirish uchun quyidagi 5 ta asosiy yo'nalishni amalga oshiraman:
+            Jasurbek Zokirjonovning Tuman IT Yetakchisi sifatida tumanimiz maktablari, o'quvchilari va ustozlari uchun taqdim etadigan 5 ta yirik amaliy tashabbusi:
           </p>
         </div>
 
         <!-- Interactive Program Tabs Navigation -->
         <div class="mt-12 flex flex-wrap justify-center gap-2 sm:gap-3" id="manifest-tabs-nav">
           <button data-tab="tab-club" class="manifest-tab-btn active px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
-            <span>🧑‍💻</span> Bepul "IT Start" To'garagi
+            <span>🧑‍💻</span> Tuman IT Maktablari Ligasi & Bepul Kurslar
           </button>
           <button data-tab="tab-olympiad" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
-            <span>🏆</span> Olimpiada & Tanlovlar Jamoasi
+            <span>🏆</span> Tuman IT Terma Jamoasi & Olimpiadalar
           </button>
           <button data-tab="tab-smart" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
-            <span>🏫</span> Maktabni Raqamlashtirish (Smart School)
+            <span>🏫</span> Fanlar Uchun 3D Web & Interaktiv Darsliklar
           </button>
           <button data-tab="tab-mentor" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
-            <span>🤝</span> Ustoz-Shogird Tizimi
+            <span>🤝</span> Tuman Ustoz-Shogird Klasteri & Mentorlik
           </button>
           <button data-tab="tab-security" class="manifest-tab-btn px-5 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 border">
-            <span>🛡️</span> AI & Kiberxavfsizlik
+            <span>🛡️</span> AI, Kiberxavfsizlik & Hakatonlar
           </button>
         </div>
 
@@ -2103,7 +2562,7 @@
           </div>
           <div>
             <div class="font-extrabold text-slate-900 text-sm">Jasurbek Zokirjonov</div>
-            <div class="text-xs text-slate-500 font-medium">Maktab IT Sohasi Yetakchisi Nomzodi • 2026</div>
+            <div class="text-xs text-slate-500 font-medium">Tuman IT Sohasi Yetakchisi Nomzodi • Maktab G'olibi (1-o'rin) • 2026</div>
           </div>
         </div>
 
@@ -2188,6 +2647,35 @@
       </div>
     </div>
   </div>
+
+  <!-- ========================================================================= -->
+  <!-- FLOATING HUD DOCK: QUICK NAVIGATION (DISTRICT STAGE SHOWCASE)             -->
+  <!-- ========================================================================= -->
+  <aside class="floating-hud hidden sm:flex items-center gap-1.5" aria-label="Tezkor navigatsiya">
+    <a href="#judges-criteria" class="px-3 py-1.5 rounded-full text-xs font-bold text-amber-700 hover:bg-amber-50 transition flex items-center gap-1">
+      <span>🏆</span> <span>Hakamlar (50/50)</span>
+    </a>
+    <span class="text-slate-300">|</span>
+    <a href="#comparison" class="px-3 py-1.5 rounded-full text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-1">
+      <span>⚔️</span> <span>Taqqoslash</span>
+    </a>
+    <span class="text-slate-300">|</span>
+    <a href="#projects" class="px-3 py-1.5 rounded-full text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-1">
+      <span>💻</span> <span>10 Loyiha</span>
+    </a>
+    <span class="text-slate-300">|</span>
+    <a href="#certificate" class="px-3 py-1.5 rounded-full text-xs font-bold text-blue-700 hover:bg-blue-50 transition flex items-center gap-1">
+      <span>🎓</span> <span>Diplom</span>
+    </a>
+    <span class="text-slate-300">|</span>
+    <a href="#terminal-section" class="px-3 py-1.5 rounded-full text-xs font-bold text-purple-700 hover:bg-purple-50 transition flex items-center gap-1">
+      <span>⚡</span> <span>Terminal</span>
+    </a>
+    <span class="text-slate-300">|</span>
+    <a href="#hero" class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold hover:bg-blue-600 transition" title="Yuqoriga">
+      ↑
+    </a>
+  </aside>
 
   <!-- Interactive Confetti Canvas (Celebration FX on Submissions) -->
   <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
